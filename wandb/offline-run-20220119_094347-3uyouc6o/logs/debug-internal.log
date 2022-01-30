@@ -1,0 +1,14 @@
+2022-01-19 09:43:59,510 INFO    MainThread:2074 [internal.py:wandb_internal():87] W&B internal server running at pid: 2074, started at: 2022-01-19 09:43:59.509046
+2022-01-19 09:43:59,522 DEBUG   HandlerThread:2074 [handler.py:handle_request():130] handle_request: run_start
+2022-01-19 09:43:59,523 INFO    WriterThread:2074 [datastore.py:open_for_write():77] open: /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220119_094347-3uyouc6o/run-3uyouc6o.wandb
+2022-01-19 09:43:59,540 DEBUG   HandlerThread:2074 [meta.py:__init__():40] meta init
+2022-01-19 09:43:59,541 DEBUG   HandlerThread:2074 [meta.py:__init__():54] meta init done
+2022-01-19 09:43:59,542 DEBUG   HandlerThread:2074 [meta.py:probe():214] probe
+2022-01-19 09:43:59,583 DEBUG   HandlerThread:2074 [meta.py:_setup_git():204] setup git
+2022-01-19 09:43:59,744 DEBUG   HandlerThread:2074 [meta.py:_setup_git():211] setup git done
+2022-01-19 09:43:59,746 DEBUG   HandlerThread:2074 [meta.py:_save_pip():58] save pip
+2022-01-19 09:43:59,751 DEBUG   HandlerThread:2074 [meta.py:_save_pip():72] save pip done
+2022-01-19 09:43:59,752 DEBUG   HandlerThread:2074 [meta.py:_save_conda():79] save conda
+2022-01-19 09:44:17,397 DEBUG   HandlerThread:2074 [meta.py:_save_conda():89] save conda done
+2022-01-19 09:44:17,399 DEBUG   HandlerThread:2074 [meta.py:probe():252] probe done
+2022-01-19 09:51:21,180 WARNING MainThread:2074 [internal.py:wandb_internal():146] Internal process interrupt: 1

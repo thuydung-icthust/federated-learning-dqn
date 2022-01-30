@@ -1,0 +1,23 @@
+>>> START RUNNING:  - Train mode:  - Dataset: mnist
+Init State dim 6
+Init Action dim 4
+ROUND:  0
+[1, 1]
+Backend MacOSX is interactive backend. Turning interactive mode on.
+start here
+ROUND:  0  TEST ACC:  0.2321
+ROUND:  1
+[1, 1]
+  0% 1/1000 [06:53<114:40:09, 413.22s/it]
+Traceback (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 323, in <module>
+    main(args)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 215, in main
+    delta_loss = [torch.sub(final_l[i],start_l[i]) for i in range(num_cli)]
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 215, in <listcomp>
+    delta_loss = [torch.sub(final_l[i],start_l[i]) for i in range(num_cli)]
+TypeError: 'int' object is not subscriptable

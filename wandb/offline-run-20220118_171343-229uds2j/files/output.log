@@ -1,0 +1,16 @@
+
+>>> START RUNNING:  - Train mode:  - Dataset: mnist
+Traceback (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 301, in <module>
+    main(args)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 144, in main
+    replay_buffer_size=args.replay_buffer_size,
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/wandb_config.py", line 154, in __getattr__
+    return self.__getitem__(key)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/wandb_config.py", line 122, in __getitem__
+    return self._items[key]
+KeyError: 'replay_buffer_size'

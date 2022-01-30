@@ -1,0 +1,18 @@
+2022-01-18 00:19:23,848 INFO    MainThread:83280 [wandb_setup.py:_flush():71] setting env: {}
+2022-01-18 00:19:23,849 INFO    MainThread:83280 [wandb_init.py:_log_setup():371] Logging user logs to /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220118_001923-3gosqinh/logs/debug.log
+2022-01-18 00:19:23,849 INFO    MainThread:83280 [wandb_init.py:_log_setup():372] Logging internal logs to /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220118_001923-3gosqinh/logs/debug-internal.log
+2022-01-18 00:19:23,849 INFO    MainThread:83280 [wandb_init.py:init():404] calling init triggers
+2022-01-18 00:19:23,850 INFO    MainThread:83280 [wandb_init.py:init():409] wandb.init called with sweep_config: {}
+config: {'num_rounds': 1000, 'num_clients': 10, 'clients_per_round': 2, 'batch_size': 32, 'num_epochs': 1, 'path_data_idx': 'dataset_idx/mnist/equal/MNIST-noniid-fedavg_equal_1.json', 'learning_rate': 0.003, 'algorithm': '', 'mu': 0.01, 'seed': 10, 'drop_percent': 0.0, 'num_core': 6, 'log_dir': './', 'train_mode': '', 'dataset_name': 'mnist', 'beta': 0.45}
+2022-01-18 00:19:23,850 INFO    MainThread:83280 [wandb_init.py:init():460] starting backend
+2022-01-18 00:19:23,850 INFO    MainThread:83280 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-01-18 00:19:23,875 INFO    MainThread:83280 [backend.py:ensure_launched():216] starting backend process...
+2022-01-18 00:19:24,492 INFO    MainThread:83280 [backend.py:ensure_launched():221] started backend process with pid: 83381
+2022-01-18 00:19:24,495 INFO    MainThread:83280 [wandb_init.py:init():469] backend started and connected
+2022-01-18 00:19:24,500 INFO    MainThread:83280 [wandb_init.py:init():533] updated telemetry
+2022-01-18 00:19:24,560 INFO    MainThread:83280 [wandb_init.py:init():606] starting run threads in backend
+2022-01-18 00:19:29,568 INFO    MainThread:83280 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-18 00:19:29,569 INFO    MainThread:83280 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-18 00:19:29,570 INFO    MainThread:83280 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-18 00:19:29,573 INFO    MainThread:83280 [wandb_run.py:_redirect():1745] Redirects installed.
+2022-01-18 00:19:29,573 INFO    MainThread:83280 [wandb_init.py:init():633] run started, returning control to user process

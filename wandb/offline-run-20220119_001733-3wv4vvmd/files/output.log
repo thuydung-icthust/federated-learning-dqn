@@ -1,0 +1,108 @@
+>>> START RUNNING:  - Train mode:  - Dataset: mnist
+Init State dim 4
+Init Action dim 4
+ROUND:  0
+[1, 1]
+Backend MacOSX is interactive backend. Turning interactive mode on.
+ROUND:  0  TEST ACC:  0.1136
+ROUND:  1
+[1, 1]
+ROUND:  1  TEST ACC:  0.1167
+ROUND:  2
+[1, 1]
+  0% 2/1000 [02:40<22:11:16, 80.04s/it]Process SpawnPoolWorker-3:
+Process SpawnPoolWorker-2:
+Process SpawnPoolWorker-5:
+Process SpawnPoolWorker-4:
+Process SpawnPoolWorker-7:
+Process SpawnPoolWorker-6:
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __e  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 366, in get
+    res = self._reader.recv_bytes()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 384, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Traceback (mostTraceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+ recent call last):
+Traceback (most recent call last):
+nter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 366, in get
+    res = self._reader.recv_bytes()
+  0% 2/1000 [15:43<130:46:47, 471.75s/it]  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 384, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 366, in get
+    res = self._reader.recv_bytes()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 384, in _recv
+    chunk = read(handle, remaining)
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 314, in <module>
+    })
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 237, in main
+    )
+KeyboardInterrupt
+KeyboardInterrupt

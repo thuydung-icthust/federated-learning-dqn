@@ -1,0 +1,20 @@
+dataset_idx/mnist/equal/MNIST-noniid-fedavg_equal_1.json
+dataset_idx/mnist/equal/MNIST-noniid-fedavg_equal_1.json
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train_SGD.py", line 288, in <module>
+    main(args)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train_SGD.py", line 134, in main
+    agent = DDPG_Agent(state_dim=state_dim, action_dim=action_dim, log_dir=args.log_dir)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/ddpg_agent/ddpg.py", line 70, in __init__
+    self.value_net = ValueNetwork(
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/module.py", line 899, in to
+    return self._apply(convert)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/module.py", line 570, in _apply
+    module._apply(fn)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/module.py", line 593, in _apply
+    param_applied = fn(param)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/module.py", line 897, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/cuda/__init__.py", line 208, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

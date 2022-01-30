@@ -1,0 +1,14 @@
+2022-01-19 00:40:08,439 INFO    MainThread:74053 [internal.py:wandb_internal():87] W&B internal server running at pid: 74053, started at: 2022-01-19 00:40:08.438963
+2022-01-19 00:40:08,444 INFO    WriterThread:74053 [datastore.py:open_for_write():77] open: /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220119_004005-1x8flm7h/run-1x8flm7h.wandb
+2022-01-19 00:40:08,445 DEBUG   HandlerThread:74053 [handler.py:handle_request():130] handle_request: run_start
+2022-01-19 00:40:08,448 DEBUG   HandlerThread:74053 [meta.py:__init__():40] meta init
+2022-01-19 00:40:08,448 DEBUG   HandlerThread:74053 [meta.py:__init__():54] meta init done
+2022-01-19 00:40:08,449 DEBUG   HandlerThread:74053 [meta.py:probe():214] probe
+2022-01-19 00:40:08,463 DEBUG   HandlerThread:74053 [meta.py:_setup_git():204] setup git
+2022-01-19 00:40:08,518 DEBUG   HandlerThread:74053 [meta.py:_setup_git():211] setup git done
+2022-01-19 00:40:08,519 DEBUG   HandlerThread:74053 [meta.py:_save_pip():58] save pip
+2022-01-19 00:40:08,521 DEBUG   HandlerThread:74053 [meta.py:_save_pip():72] save pip done
+2022-01-19 00:40:08,521 DEBUG   HandlerThread:74053 [meta.py:_save_conda():79] save conda
+2022-01-19 00:40:11,561 DEBUG   HandlerThread:74053 [meta.py:_save_conda():89] save conda done
+2022-01-19 00:40:11,562 DEBUG   HandlerThread:74053 [meta.py:probe():252] probe done
+2022-01-19 09:21:12,772 WARNING MainThread:74053 [internal.py:wandb_internal():146] Internal process interrupt: 1

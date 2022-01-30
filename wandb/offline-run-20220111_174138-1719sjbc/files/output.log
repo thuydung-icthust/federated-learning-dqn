@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train_SGD.py", line 285, in <module>
+    main(args)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train_SGD.py", line 57, in main
+    print(list_idx_sample = get_data_index_file(args.unequal, args.data_name, args.data_index))
+TypeError: 'list_idx_sample' is an invalid keyword argument for print()

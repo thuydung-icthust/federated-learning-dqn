@@ -1,0 +1,9 @@
+torch
+torchvision
+tqdm
+sklearn
+gym
+IPython
+numpy
+matplotlib
+wandb

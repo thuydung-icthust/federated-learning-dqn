@@ -1,0 +1,79 @@
+2022-01-25 21:30:14,001 INFO    MainThread:5095 [internal.py:wandb_internal():87] W&B internal server running at pid: 5095, started at: 2022-01-25 21:30:14.000993
+2022-01-25 21:30:14,002 INFO    WriterThread:5095 [datastore.py:open_for_write():77] open: /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220125_213010-jji84547/run-jji84547.wandb
+2022-01-25 21:30:14,003 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: run_start
+2022-01-25 21:30:14,004 DEBUG   HandlerThread:5095 [meta.py:__init__():40] meta init
+2022-01-25 21:30:14,005 DEBUG   HandlerThread:5095 [meta.py:__init__():54] meta init done
+2022-01-25 21:30:14,005 DEBUG   HandlerThread:5095 [meta.py:probe():214] probe
+2022-01-25 21:30:14,017 DEBUG   HandlerThread:5095 [meta.py:_setup_git():204] setup git
+2022-01-25 21:30:14,075 DEBUG   HandlerThread:5095 [meta.py:_setup_git():211] setup git done
+2022-01-25 21:30:14,076 DEBUG   HandlerThread:5095 [meta.py:_save_pip():58] save pip
+2022-01-25 21:30:14,077 DEBUG   HandlerThread:5095 [meta.py:_save_pip():72] save pip done
+2022-01-25 21:30:14,077 DEBUG   HandlerThread:5095 [meta.py:_save_conda():79] save conda
+2022-01-25 21:30:31,149 DEBUG   HandlerThread:5095 [meta.py:_save_conda():89] save conda done
+2022-01-25 21:30:31,152 DEBUG   HandlerThread:5095 [meta.py:probe():252] probe done
+2022-01-25 21:31:36,546 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: poll_exit
+2022-01-25 21:31:36,545 DEBUG   SenderThread:5095 [sender.py:send():234] send: exit
+2022-01-25 21:31:36,563 INFO    SenderThread:5095 [sender.py:send_exit():366] handling exit code: 1
+2022-01-25 21:31:36,609 INFO    SenderThread:5095 [sender.py:send_exit():368] handling runtime: 82
+2022-01-25 21:31:36,611 INFO    SenderThread:5095 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-01-25 21:31:36,611 INFO    SenderThread:5095 [sender.py:send_exit():374] send defer
+2022-01-25 21:31:36,614 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: poll_exit
+2022-01-25 21:31:36,616 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,617 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 0
+2022-01-25 21:31:36,617 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,618 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 0
+2022-01-25 21:31:36,618 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 1
+2022-01-25 21:31:36,618 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,618 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 1
+2022-01-25 21:31:36,635 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,635 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 1
+2022-01-25 21:31:36,635 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 2
+2022-01-25 21:31:36,643 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,643 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 2
+2022-01-25 21:31:36,663 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,663 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 2
+2022-01-25 21:31:36,663 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 3
+2022-01-25 21:31:36,665 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,665 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 3
+2022-01-25 21:31:36,666 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,670 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 3
+2022-01-25 21:31:36,671 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 4
+2022-01-25 21:31:36,674 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,674 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 4
+2022-01-25 21:31:36,675 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,675 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 4
+2022-01-25 21:31:36,675 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 5
+2022-01-25 21:31:36,676 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,676 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 5
+2022-01-25 21:31:36,676 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,676 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 5
+2022-01-25 21:31:36,677 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 6
+2022-01-25 21:31:36,677 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,677 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 6
+2022-01-25 21:31:36,677 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,677 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 6
+2022-01-25 21:31:36,677 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 7
+2022-01-25 21:31:36,677 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,678 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 7
+2022-01-25 21:31:36,678 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,678 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 7
+2022-01-25 21:31:36,679 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 8
+2022-01-25 21:31:36,679 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,679 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 8
+2022-01-25 21:31:36,680 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,680 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 8
+2022-01-25 21:31:36,681 INFO    SenderThread:5095 [sender.py:transition_state():387] send defer: 9
+2022-01-25 21:31:36,682 DEBUG   SenderThread:5095 [sender.py:send():234] send: final
+2022-01-25 21:31:36,682 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: defer
+2022-01-25 21:31:36,682 INFO    HandlerThread:5095 [handler.py:handle_request_defer():147] handle defer: 9
+2022-01-25 21:31:36,682 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: defer
+2022-01-25 21:31:36,682 INFO    SenderThread:5095 [sender.py:send_request_defer():383] handle sender defer: 9
+2022-01-25 21:31:36,741 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: poll_exit
+2022-01-25 21:31:36,742 DEBUG   SenderThread:5095 [sender.py:send_request():248] send_request: poll_exit
+2022-01-25 21:31:36,748 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: get_summary
+2022-01-25 21:31:36,749 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: sampled_history
+2022-01-25 21:31:36,751 DEBUG   HandlerThread:5095 [handler.py:handle_request():130] handle_request: shutdown
+2022-01-25 21:31:36,753 INFO    HandlerThread:5095 [handler.py:finish():731] shutting down handler
+2022-01-25 21:31:37,690 INFO    WriterThread:5095 [datastore.py:close():281] close: /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220125_213010-jji84547/run-jji84547.wandb
+2022-01-25 21:31:37,750 INFO    SenderThread:5095 [sender.py:finish():1070] shutting down sender
+2022-01-25 21:31:37,759 INFO    MainThread:5095 [internal.py:handle_exit():77] Internal process exited

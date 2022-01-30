@@ -1,0 +1,22 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-01-17T04:21:07.966314",
+    "startedAt": "2022-01-17T04:21:03.240480",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "git@github.com:AIoT-Lab-BKAI/LongND-FL-Parallel-Computing.git",
+        "commit": "00115cbdfe9756c9d95d6c623be2a16e6a63a77d"
+    },
+    "email": "thuydungnguyen.ictk63@gmail.com",
+    "root": "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing",
+    "host": "ThuyDungs-MacBook-Pro.local",
+    "username": "thuydungnguyen",
+    "executable": "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/bin/python"
+}

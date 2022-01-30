@@ -1,0 +1,27 @@
+2022-01-11 15:55:54,253 INFO    MainThread:6359 [wandb_setup.py:_flush():71] setting env: {}
+2022-01-11 15:55:54,253 INFO    MainThread:6359 [wandb_init.py:_log_setup():371] Logging user logs to /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220111_155554-2caecgtv/logs/debug.log
+2022-01-11 15:55:54,253 INFO    MainThread:6359 [wandb_init.py:_log_setup():372] Logging internal logs to /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220111_155554-2caecgtv/logs/debug-internal.log
+2022-01-11 15:55:54,253 INFO    MainThread:6359 [wandb_init.py:init():404] calling init triggers
+2022-01-11 15:55:54,253 INFO    MainThread:6359 [wandb_init.py:init():409] wandb.init called with sweep_config: {}
+config: {'num_rounds': 2000, 'eval_every': -1, 'num_clients': 10, 'clients_per_round': 10, 'num_class_per_client': 2, 'rate_balance': 0, 'batch_size': 10, 'num_epochs': 5, 'path_data_idx': 'dataset_idx/MNIST-featured_non-iid.txt', 'load_data_idx': False, 'learning_rate': 0.01, 'num_samples_per_class': 10, 'mu': 0, 'seed': 10, 'drop_percent': 0.0, 'algorithm': 'fedprox', 'num_core': 9, 'log_dir': './', 'log_file': 'logs', 'num_sample_per_class': 10, 'local_save_mode': False}
+2022-01-11 15:55:54,253 INFO    MainThread:6359 [wandb_init.py:init():460] starting backend
+2022-01-11 15:55:54,254 INFO    MainThread:6359 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-01-11 15:55:54,265 INFO    MainThread:6359 [backend.py:ensure_launched():216] starting backend process...
+2022-01-11 15:55:54,274 INFO    MainThread:6359 [backend.py:ensure_launched():221] started backend process with pid: 6366
+2022-01-11 15:55:54,278 INFO    MainThread:6359 [wandb_init.py:init():469] backend started and connected
+2022-01-11 15:55:54,287 INFO    MainThread:6359 [wandb_init.py:init():533] updated telemetry
+2022-01-11 15:55:54,324 INFO    MainThread:6359 [wandb_init.py:init():606] starting run threads in backend
+2022-01-11 15:55:59,309 INFO    MainThread:6359 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-11 15:55:59,310 INFO    MainThread:6359 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-11 15:55:59,311 INFO    MainThread:6359 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-11 15:55:59,312 INFO    MainThread:6359 [wandb_run.py:_redirect():1745] Redirects installed.
+2022-01-11 15:55:59,313 INFO    MainThread:6359 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-11 15:55:59,475 INFO    MainThread:6359 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 1
+2022-01-11 15:55:59,483 INFO    MainThread:6359 [wandb_run.py:_restore():1752] restore
+2022-01-11 15:56:01,840 INFO    MainThread:6359 [wandb_run.py:_wait_for_finish():1912] got exit ret: 
+2022-01-11 15:56:01,946 INFO    MainThread:6359 [wandb_run.py:_wait_for_finish():1912] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+

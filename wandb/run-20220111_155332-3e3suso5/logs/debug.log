@@ -1,0 +1,99 @@
+2022-01-11 15:53:32,914 INFO    MainThread:5529 [wandb_setup.py:_flush():71] setting env: {}
+2022-01-11 15:53:32,914 INFO    MainThread:5529 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-11 15:53:32,914 INFO    MainThread:5529 [wandb_init.py:_log_setup():371] Logging user logs to /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/run-20220111_155332-3e3suso5/logs/debug.log
+2022-01-11 15:53:32,914 INFO    MainThread:5529 [wandb_init.py:_log_setup():372] Logging internal logs to /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/run-20220111_155332-3e3suso5/logs/debug-internal.log
+2022-01-11 15:53:32,915 INFO    MainThread:5529 [wandb_init.py:init():404] calling init triggers
+2022-01-11 15:53:32,915 INFO    MainThread:5529 [wandb_init.py:init():409] wandb.init called with sweep_config: {}
+config: {'num_rounds': 2000, 'eval_every': -1, 'num_clients': 10, 'clients_per_round': 10, 'num_class_per_client': 2, 'rate_balance': 0, 'batch_size': 10, 'num_epochs': 5, 'path_data_idx': 'dataset_idx/MNIST-featured_non-iid.txt', 'load_data_idx': False, 'learning_rate': 0.01, 'num_samples_per_class': 10, 'mu': 0, 'seed': 10, 'drop_percent': 0.0, 'algorithm': 'fedprox', 'num_core': 9, 'log_dir': './', 'log_file': 'logs', 'num_sample_per_class': 10, 'local_save_mode': False}
+2022-01-11 15:53:32,915 INFO    MainThread:5529 [wandb_init.py:init():460] starting backend
+2022-01-11 15:53:32,915 INFO    MainThread:5529 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-01-11 15:53:32,935 INFO    MainThread:5529 [backend.py:ensure_launched():216] starting backend process...
+2022-01-11 15:53:32,950 INFO    MainThread:5529 [backend.py:ensure_launched():221] started backend process with pid: 5596
+2022-01-11 15:53:32,952 INFO    MainThread:5529 [wandb_init.py:init():469] backend started and connected
+2022-01-11 15:53:32,964 INFO    MainThread:5529 [wandb_init.py:init():533] updated telemetry
+2022-01-11 15:53:33,002 INFO    MainThread:5529 [wandb_init.py:init():563] communicating current version
+2022-01-11 15:53:35,715 INFO    MainThread:5529 [wandb_init.py:init():568] got version response 
+2022-01-11 15:53:35,715 INFO    MainThread:5529 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-11 15:53:36,654 WARNING MainThread:5529 [wandb_init.py:init():952] interrupted
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 931, in init
+    run = wi.init()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 579, in init
+    ret = backend.interface.communicate_run(run, timeout=30)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 210, in communicate_run
+    return self._communicate_run(run, timeout=timeout)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 311, in _communicate_run
+    resp = self._communicate(req, timeout=timeout)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 213, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/interface/router.py", line 37, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2022-01-11 15:54:01,516 ERROR   Thread-1  :5529 [retry.py:__call__():126] Retry attempt failed:
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/util/retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/connectionpool.py", line 447, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/urllib3/connectionpool.py", line 336, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 141, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)

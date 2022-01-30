@@ -1,0 +1,789 @@
+>>> START RUNNING:  - Train mode:  - Dataset: mnist
+Init State dim 6
+Init Action dim 4
+ROUND:  0
+[1, 1]
+ROUND:  0  TEST ACC:  0.2336
+ROUND:  1
+[1, 1]
+ROUND:  1  TEST ACC:  0.0974
+ROUND:  2
+[1, 1]
+ROUND:  2  TEST ACC:  0.292
+ROUND:  3
+[1, 1]
+ROUND:  3  TEST ACC:  0.1802
+ROUND:  4
+[1, 1]
+ROUND:  4  TEST ACC:  0.1552
+ROUND:  5
+[1, 1]
+ROUND:  5  TEST ACC:  0.2208
+ROUND:  6
+[1, 1]
+ROUND:  6  TEST ACC:  0.2633
+ROUND:  7
+[1, 1]
+ROUND:  7  TEST ACC:  0.4438
+ROUND:  8
+[1, 1]
+ROUND:  8  TEST ACC:  0.5185
+ROUND:  9
+[1, 1]
+ROUND:  9  TEST ACC:  0.5217
+ROUND:  10
+[1, 1]
+ROUND:  10  TEST ACC:  0.4815
+ROUND:  11
+[1, 1]
+ROUND:  11  TEST ACC:  0.403
+ROUND:  12
+[1, 1]
+ROUND:  12  TEST ACC:  0.5706
+ROUND:  13
+[1, 1]
+ROUND:  13  TEST ACC:  0.6161
+ROUND:  14
+[1, 1]
+ROUND:  14  TEST ACC:  0.6103
+ROUND:  15
+[1, 1]
+ROUND:  15  TEST ACC:  0.6816
+ROUND:  16
+[1, 1]
+ROUND:  16  TEST ACC:  0.7306
+ROUND:  17
+[1, 1]
+ROUND:  17  TEST ACC:  0.5186
+ROUND:  18
+[1, 1]
+ROUND:  18  TEST ACC:  0.422
+ROUND:  19
+[1, 1]
+ROUND:  19  TEST ACC:  0.4767
+ROUND:  20
+[1, 1]
+ROUND:  20  TEST ACC:  0.6501
+ROUND:  21
+[1, 1]
+ROUND:  21  TEST ACC:  0.5494
+ROUND:  22
+[1, 1]
+ROUND:  22  TEST ACC:  0.5734
+ROUND:  23
+[1, 1]
+ROUND:  23  TEST ACC:  0.5382
+ROUND:  24
+[1, 1]
+ROUND:  24  TEST ACC:  0.5202
+ROUND:  25
+[1, 1]
+ROUND:  25  TEST ACC:  0.6932
+ROUND:  26
+[1, 1]
+ROUND:  26  TEST ACC:  0.567
+ROUND:  27
+[1, 1]
+ROUND:  27  TEST ACC:  0.6194
+ROUND:  28
+[1, 1]
+ROUND:  28  TEST ACC:  0.5344
+ROUND:  29
+[1, 1]
+ROUND:  29  TEST ACC:  0.6064
+ROUND:  30
+[1, 1]
+ROUND:  30  TEST ACC:  0.6182
+ROUND:  31
+[1, 1]
+ROUND:  31  TEST ACC:  0.6468
+ROUND:  32
+[1, 1]
+ROUND:  32  TEST ACC:  0.7394
+ROUND:  33
+[1, 1]
+ROUND:  33  TEST ACC:  0.6948
+ROUND:  34
+[1, 1]
+ROUND:  34  TEST ACC:  0.5861
+ROUND:  35
+[1, 1]
+ROUND:  35  TEST ACC:  0.615
+ROUND:  36
+[1, 1]
+ROUND:  36  TEST ACC:  0.7041
+ROUND:  37
+[1, 1]
+ROUND:  37  TEST ACC:  0.6777
+ROUND:  38
+[1, 1]
+ROUND:  38  TEST ACC:  0.7567
+ROUND:  39
+[1, 1]
+ROUND:  39  TEST ACC:  0.6638
+ROUND:  40
+[1, 1]
+ROUND:  40  TEST ACC:  0.702
+ROUND:  41
+[1, 1]
+ROUND:  41  TEST ACC:  0.7946
+ROUND:  42
+[1, 1]
+ROUND:  42  TEST ACC:  0.6604
+ROUND:  43
+[1, 1]
+ROUND:  43  TEST ACC:  0.6937
+ROUND:  44
+[1, 1]
+ROUND:  44  TEST ACC:  0.8375
+ROUND:  45
+[1, 1]
+ROUND:  45  TEST ACC:  0.8102
+ROUND:  46
+[1, 1]
+ROUND:  46  TEST ACC:  0.7508
+ROUND:  47
+[1, 1]
+ROUND:  47  TEST ACC:  0.6957
+ROUND:  48
+[1, 1]
+ROUND:  48  TEST ACC:  0.6497
+ROUND:  49
+[1, 1]
+ROUND:  49  TEST ACC:  0.7276
+ROUND:  50
+[1, 1]
+ROUND:  50  TEST ACC:  0.7134
+ROUND:  51
+[1, 1]
+ROUND:  51  TEST ACC:  0.7598
+ROUND:  52
+[1, 1]
+ROUND:  52  TEST ACC:  0.7937
+ROUND:  53
+[1, 1]
+ROUND:  53  TEST ACC:  0.7869
+ROUND:  54
+[1, 1]
+ROUND:  54  TEST ACC:  0.7948
+ROUND:  55
+[1, 1]
+ROUND:  55  TEST ACC:  0.7657
+ROUND:  56
+[1, 1]
+ROUND:  56  TEST ACC:  0.7054
+ROUND:  57
+[1, 1]
+ROUND:  57  TEST ACC:  0.6856
+ROUND:  58
+[1, 1]
+ROUND:  58  TEST ACC:  0.7097
+ROUND:  59
+[1, 1]
+ROUND:  59  TEST ACC:  0.867
+ROUND:  60
+[1, 1]
+ROUND:  60  TEST ACC:  0.805
+ROUND:  61
+[1, 1]
+ROUND:  61  TEST ACC:  0.8524
+ROUND:  62
+[1, 1]
+ROUND:  62  TEST ACC:  0.8579
+ROUND:  63
+[1, 1]
+ROUND:  63  TEST ACC:  0.8686
+ROUND:  64
+[1, 1]
+ROUND:  64  TEST ACC:  0.8433
+ROUND:  65
+[1, 1]
+ROUND:  65  TEST ACC:  0.8622
+ROUND:  66
+[1, 1]
+ROUND:  66  TEST ACC:  0.8693
+ROUND:  67
+[1, 1]
+ROUND:  67  TEST ACC:  0.7015
+ROUND:  68
+[1, 1]
+ROUND:  68  TEST ACC:  0.6107
+ROUND:  69
+[1, 1]
+ROUND:  69  TEST ACC:  0.8225
+ROUND:  70
+[1, 1]
+ROUND:  70  TEST ACC:  0.7757
+ROUND:  71
+[1, 1]
+ROUND:  71  TEST ACC:  0.6904
+ROUND:  72
+[1, 1]
+ROUND:  72  TEST ACC:  0.9105
+ROUND:  73
+[1, 1]
+ROUND:  73  TEST ACC:  0.7395
+ROUND:  74
+[1, 1]
+ROUND:  74  TEST ACC:  0.6774
+ROUND:  75
+[1, 1]
+ROUND:  75  TEST ACC:  0.8505
+ROUND:  76
+[1, 1]
+ROUND:  76  TEST ACC:  0.7694
+ROUND:  77
+[1, 1]
+ROUND:  77  TEST ACC:  0.8823
+ROUND:  78
+[1, 1]
+ROUND:  78  TEST ACC:  0.803
+ROUND:  79
+[1, 1]
+ROUND:  79  TEST ACC:  0.7511
+ROUND:  80
+[1, 1]
+ROUND:  80  TEST ACC:  0.7669
+ROUND:  81
+[1, 1]
+ROUND:  81  TEST ACC:  0.8745
+ROUND:  82
+[1, 1]
+ROUND:  82  TEST ACC:  0.8643
+ROUND:  83
+[1, 1]
+ROUND:  83  TEST ACC:  0.7949
+ROUND:  84
+[1, 1]
+ROUND:  84  TEST ACC:  0.8028
+ROUND:  85
+[1, 1]
+ROUND:  85  TEST ACC:  0.8
+ROUND:  86
+[1, 1]
+ROUND:  86  TEST ACC:  0.8615
+ROUND:  87
+[1, 1]
+ROUND:  87  TEST ACC:  0.8837
+ROUND:  88
+[1, 1]
+ROUND:  88  TEST ACC:  0.9015
+ROUND:  89
+[1, 1]
+ROUND:  89  TEST ACC:  0.8342
+ROUND:  90
+[1, 1]
+ROUND:  90  TEST ACC:  0.9277
+ROUND:  91
+[1, 1]
+ROUND:  91  TEST ACC:  0.9042
+ROUND:  92
+[1, 1]
+ROUND:  92  TEST ACC:  0.7848
+ROUND:  93
+[1, 1]
+ROUND:  93  TEST ACC:  0.7584
+ROUND:  94
+[1, 1]
+ROUND:  94  TEST ACC:  0.8769
+ROUND:  95
+[1, 1]
+ROUND:  95  TEST ACC:  0.822
+ROUND:  96
+[1, 1]
+ROUND:  96  TEST ACC:  0.7904
+ROUND:  97
+[1, 1]
+ROUND:  97  TEST ACC:  0.7062
+ROUND:  98
+[1, 1]
+ROUND:  98  TEST ACC:  0.8518
+ROUND:  99
+[1, 1]
+ROUND:  99  TEST ACC:  0.7967
+ROUND:  100
+[1, 1]
+ROUND:  100  TEST ACC:  0.8444
+ROUND:  101
+[1, 1]
+ROUND:  101  TEST ACC:  0.8202
+ROUND:  102
+[1, 1]
+ROUND:  102  TEST ACC:  0.8194
+ROUND:  103
+[1, 1]
+ROUND:  103  TEST ACC:  0.8448
+ROUND:  104
+[1, 1]
+ROUND:  104  TEST ACC:  0.8882
+ROUND:  105
+[1, 1]
+ROUND:  105  TEST ACC:  0.8935
+ROUND:  106
+[1, 1]
+ROUND:  106  TEST ACC:  0.6662
+ROUND:  107
+[1, 1]
+ROUND:  107  TEST ACC:  0.9069
+ROUND:  108
+[1, 1]
+ROUND:  108  TEST ACC:  0.8496
+ROUND:  109
+[1, 1]
+ROUND:  109  TEST ACC:  0.7847
+ROUND:  110
+[1, 1]
+ROUND:  110  TEST ACC:  0.8916
+ROUND:  111
+[1, 1]
+ROUND:  111  TEST ACC:  0.7114
+ROUND:  112
+[1, 1]
+ROUND:  112  TEST ACC:  0.8329
+ROUND:  113
+[1, 1]
+ROUND:  113  TEST ACC:  0.7739
+ROUND:  114
+[1, 1]
+ROUND:  114  TEST ACC:  0.8292
+ROUND:  115
+[1, 1]
+ROUND:  115  TEST ACC:  0.9229
+ROUND:  116
+[1, 1]
+ROUND:  116  TEST ACC:  0.8715
+ROUND:  117
+[1, 1]
+ROUND:  117  TEST ACC:  0.8375
+ROUND:  118
+[1, 1]
+ROUND:  118  TEST ACC:  0.8759
+ROUND:  119
+[1, 1]
+ROUND:  119  TEST ACC:  0.884
+ROUND:  120
+[1, 1]
+ROUND:  120  TEST ACC:  0.9371
+ROUND:  121
+[1, 1]
+ROUND:  121  TEST ACC:  0.9192
+ROUND:  122
+[1, 1]
+ROUND:  122  TEST ACC:  0.9212
+ROUND:  123
+[1, 1]
+ROUND:  123  TEST ACC:  0.8675
+ROUND:  124
+[1, 1]
+ROUND:  124  TEST ACC:  0.8854
+ROUND:  125
+[1, 1]
+ROUND:  125  TEST ACC:  0.8281
+ROUND:  126
+[1, 1]
+ROUND:  126  TEST ACC:  0.89
+ROUND:  127
+[1, 1]
+ROUND:  127  TEST ACC:  0.9059
+ROUND:  128
+[1, 1]
+ROUND:  128  TEST ACC:  0.9181
+ROUND:  129
+[1, 1]
+ROUND:  129  TEST ACC:  0.9335
+ROUND:  130
+[1, 1]
+ROUND:  130  TEST ACC:  0.8824
+ROUND:  131
+[1, 1]
+ROUND:  131  TEST ACC:  0.808
+ROUND:  132
+[1, 1]
+ROUND:  132  TEST ACC:  0.8823
+ROUND:  133
+[1, 1]
+ROUND:  133  TEST ACC:  0.9219
+ROUND:  134
+[1, 1]
+ROUND:  134  TEST ACC:  0.8709
+ROUND:  135
+[1, 1]
+ROUND:  135  TEST ACC:  0.9015
+ROUND:  136
+[1, 1]
+ROUND:  136  TEST ACC:  0.9288
+ROUND:  137
+[1, 1]
+ROUND:  137  TEST ACC:  0.9246
+ROUND:  138
+[1, 1]
+ROUND:  138  TEST ACC:  0.9405
+ROUND:  139
+[1, 1]
+ROUND:  139  TEST ACC:  0.8597
+ROUND:  140
+[1, 1]
+ROUND:  140  TEST ACC:  0.9012
+ROUND:  141
+[1, 1]
+ROUND:  141  TEST ACC:  0.8631
+ROUND:  142
+[1, 1]
+ROUND:  142  TEST ACC:  0.8437
+ROUND:  143
+[1, 1]
+ROUND:  143  TEST ACC:  0.8107
+ROUND:  144
+[1, 1]
+ROUND:  144  TEST ACC:  0.9153
+ROUND:  145
+[1, 1]
+ROUND:  145  TEST ACC:  0.8727
+ROUND:  146
+[1, 1]
+ROUND:  146  TEST ACC:  0.7961
+ROUND:  147
+[1, 1]
+ROUND:  147  TEST ACC:  0.7981
+ROUND:  148
+[1, 1]
+ROUND:  148  TEST ACC:  0.8785
+ROUND:  149
+[1, 1]
+ROUND:  149  TEST ACC:  0.9405
+ROUND:  150
+[1, 1]
+ROUND:  150  TEST ACC:  0.936
+ROUND:  151
+[1, 1]
+ROUND:  151  TEST ACC:  0.8187
+ROUND:  152
+[1, 1]
+ROUND:  152  TEST ACC:  0.8776
+ROUND:  153
+[1, 1]
+ROUND:  153  TEST ACC:  0.9358
+ROUND:  154
+[1, 1]
+ROUND:  154  TEST ACC:  0.9325
+ROUND:  155
+[1, 1]
+ROUND:  155  TEST ACC:  0.9215
+ROUND:  156
+[1, 1]
+ROUND:  156  TEST ACC:  0.9026
+ROUND:  157
+[1, 1]
+ROUND:  157  TEST ACC:  0.9129
+ROUND:  158
+[1, 1]
+ROUND:  158  TEST ACC:  0.945
+ROUND:  159
+[1, 1]
+ROUND:  159  TEST ACC:  0.8827
+ROUND:  160
+[1, 1]
+ROUND:  160  TEST ACC:  0.9156
+ROUND:  161
+[1, 1]
+ROUND:  161  TEST ACC:  0.8674
+ROUND:  162
+[1, 1]
+ROUND:  162  TEST ACC:  0.9373
+ROUND:  163
+[1, 1]
+ROUND:  163  TEST ACC:  0.8883
+ROUND:  164
+[1, 1]
+ROUND:  164  TEST ACC:  0.8796
+ROUND:  165
+[1, 1]
+ROUND:  165  TEST ACC:  0.8482
+ROUND:  166
+[1, 1]
+ROUND:  166  TEST ACC:  0.9301
+ROUND:  167
+[1, 1]
+ROUND:  167  TEST ACC:  0.833
+ROUND:  168
+[1, 1]
+ROUND:  168  TEST ACC:  0.8745
+ROUND:  169
+[1, 1]
+ROUND:  169  TEST ACC:  0.9019
+ROUND:  170
+[1, 1]
+ROUND:  170  TEST ACC:  0.8811
+ROUND:  171
+[1, 1]
+ROUND:  171  TEST ACC:  0.9293
+ROUND:  172
+[1, 1]
+ROUND:  172  TEST ACC:  0.8655
+ROUND:  173
+[1, 1]
+ROUND:  173  TEST ACC:  0.9236
+ROUND:  174
+[1, 1]
+ROUND:  174  TEST ACC:  0.8754
+ROUND:  175
+[1, 1]
+ROUND:  175  TEST ACC:  0.9017
+ROUND:  176
+[1, 1]
+ROUND:  176  TEST ACC:  0.9342
+ROUND:  177
+[1, 1]
+ROUND:  177  TEST ACC:  0.9232
+ROUND:  178
+[1, 1]
+ROUND:  178  TEST ACC:  0.9291
+ROUND:  179
+[1, 1]
+ROUND:  179  TEST ACC:  0.8041
+ROUND:  180
+[1, 1]
+ROUND:  180  TEST ACC:  0.9241
+ROUND:  181
+[1, 1]
+ROUND:  181  TEST ACC:  0.8737
+ROUND:  182
+[1, 1]
+ROUND:  182  TEST ACC:  0.8323
+ROUND:  183
+[1, 1]
+ROUND:  183  TEST ACC:  0.9441
+ROUND:  184
+[1, 1]
+ROUND:  184  TEST ACC:  0.8992
+ROUND:  185
+[1, 1]
+ROUND:  185  TEST ACC:  0.9086
+ROUND:  186
+[1, 1]
+ROUND:  186  TEST ACC:  0.943
+ROUND:  187
+[1, 1]
+ROUND:  187  TEST ACC:  0.8987
+ROUND:  188
+[1, 1]
+ROUND:  188  TEST ACC:  0.8867
+ROUND:  189
+[1, 1]
+ROUND:  189  TEST ACC:  0.9256
+ROUND:  190
+[1, 1]
+ROUND:  190  TEST ACC:  0.8608
+ROUND:  191
+[1, 1]
+ROUND:  191  TEST ACC:  0.7913
+ROUND:  192
+[1, 1]
+ROUND:  192  TEST ACC:  0.8967
+ROUND:  193
+[1, 1]
+ROUND:  193  TEST ACC:  0.9131
+ROUND:  194
+[1, 1]
+ROUND:  194  TEST ACC:  0.9368
+ROUND:  195
+[1, 1]
+ROUND:  195  TEST ACC:  0.9426
+ROUND:  196
+[1, 1]
+ROUND:  196  TEST ACC:  0.91
+ROUND:  197
+[1, 1]
+ROUND:  197  TEST ACC:  0.9294
+ROUND:  198
+[1, 1]
+ROUND:  198  TEST ACC:  0.935
+ROUND:  199
+[1, 1]
+ROUND:  199  TEST ACC:  0.9496
+ROUND:  200
+[1, 1]
+ROUND:  200  TEST ACC:  0.9209
+ROUND:  201
+[1, 1]
+ROUND:  201  TEST ACC:  0.8926
+ROUND:  202
+[1, 1]
+ROUND:  202  TEST ACC:  0.8479
+ROUND:  203
+[1, 1]
+ROUND:  203  TEST ACC:  0.918
+ROUND:  204
+[1, 1]
+ROUND:  204  TEST ACC:  0.8256
+ROUND:  205
+[1, 1]
+ROUND:  205  TEST ACC:  0.891
+ROUND:  206
+[1, 1]
+ROUND:  206  TEST ACC:  0.9442
+ROUND:  207
+[1, 1]
+ROUND:  207  TEST ACC:  0.8955
+ROUND:  208
+[1, 1]
+ROUND:  208  TEST ACC:  0.9156
+ROUND:  209
+[1, 1]
+ROUND:  209  TEST ACC:  0.9406
+ROUND:  210
+[1, 1]
+ROUND:  210  TEST ACC:  0.9415
+ROUND:  211
+[1, 1]
+ROUND:  211  TEST ACC:  0.9129
+ROUND:  212
+[1, 1]
+ROUND:  212  TEST ACC:  0.9207
+ROUND:  213
+[1, 1]
+ROUND:  213  TEST ACC:  0.9359
+ROUND:  214
+[1, 1]
+ROUND:  214  TEST ACC:  0.9157
+ROUND:  215
+[1, 1]
+ROUND:  215  TEST ACC:  0.9256
+ROUND:  216
+[1, 1]
+ROUND:  216  TEST ACC:  0.9205
+ROUND:  217
+[1, 1]
+ROUND:  217  TEST ACC:  0.9414
+ROUND:  218
+[1, 1]
+ROUND:  218  TEST ACC:  0.9025
+ROUND:  219
+[1, 1]
+ROUND:  219  TEST ACC:  0.9284
+ROUND:  220
+[1, 1]
+ROUND:  220  TEST ACC:  0.8431
+ROUND:  221
+[1, 1]
+ROUND:  221  TEST ACC:  0.8916
+ROUND:  222
+[1, 1]
+ROUND:  222  TEST ACC:  0.9009
+ROUND:  223
+[1, 1]
+ROUND:  223  TEST ACC:  0.8575
+ROUND:  224
+[1, 1]
+ROUND:  224  TEST ACC:  0.8862
+ROUND:  225
+[1, 1]
+ROUND:  225  TEST ACC:  0.9222
+ROUND:  226
+[1, 1]
+ROUND:  226  TEST ACC:  0.9333
+ROUND:  227
+[1, 1]
+ 23% 227/1000 [1:55:31<7:41:23, 35.81s/it]Process SpawnPoolWorker-6:
+Process SpawnPoolWorker-7:
+Process SpawnPoolWorker-3:
+Process SpawnPoolWorker-5:
+Process SpawnPoolWorker-4:
+Process SpawnPoolWorker-2:
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+ 23% 227/1000 [1:56:05<6:35:19, 30.69s/it]
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 365, in get
+    with self._rlock:
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/queues.py", line 366, in get
+    res = self._reader.recv_bytes()
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/multiprocessing/connection.py", line 384, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 324, in <module>
+    wandb.define_metric("test_acc", summary="max")
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 230, in main
+    client_model.load_state_dict(unflatten_model(flat_tensor, client_model))
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/utils/trainer.py", line 86, in test
+    X = X.to(device)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/models/models.py", line 30, in forward
+    x = self.pool(F.relu(self.conv2(x)))
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/modules/pooling.py", line 162, in forward
+    return F.max_pool2d(input, self.kernel_size, self.stride,
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/_jit_internal.py", line 422, in fn
+    return if_false(*args, **kwargs)
+  File "/Users/thuydungnguyen/opt/anaconda3/envs/sample-federated/lib/python3.9/site-packages/torch/nn/functional.py", line 719, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+KeyboardInterrupt

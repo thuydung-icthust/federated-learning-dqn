@@ -1,0 +1,14 @@
+2022-01-17 22:02:12,195 INFO    MainThread:50951 [internal.py:wandb_internal():87] W&B internal server running at pid: 50951, started at: 2022-01-17 22:02:12.195390
+2022-01-17 22:02:12,200 DEBUG   HandlerThread:50951 [handler.py:handle_request():130] handle_request: run_start
+2022-01-17 22:02:12,201 INFO    WriterThread:50951 [datastore.py:open_for_write():77] open: /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220117_220208-foag511z/run-foag511z.wandb
+2022-01-17 22:02:12,206 DEBUG   HandlerThread:50951 [meta.py:__init__():40] meta init
+2022-01-17 22:02:12,206 DEBUG   HandlerThread:50951 [meta.py:__init__():54] meta init done
+2022-01-17 22:02:12,206 DEBUG   HandlerThread:50951 [meta.py:probe():214] probe
+2022-01-17 22:02:12,219 DEBUG   HandlerThread:50951 [meta.py:_setup_git():204] setup git
+2022-01-17 22:02:12,269 DEBUG   HandlerThread:50951 [meta.py:_setup_git():211] setup git done
+2022-01-17 22:02:12,270 DEBUG   HandlerThread:50951 [meta.py:_save_pip():58] save pip
+2022-01-17 22:02:12,271 DEBUG   HandlerThread:50951 [meta.py:_save_pip():72] save pip done
+2022-01-17 22:02:12,272 DEBUG   HandlerThread:50951 [meta.py:_save_conda():79] save conda
+2022-01-17 22:02:15,357 DEBUG   HandlerThread:50951 [meta.py:_save_conda():89] save conda done
+2022-01-17 22:02:15,358 DEBUG   HandlerThread:50951 [meta.py:probe():252] probe done
+2022-01-17 22:05:44,334 WARNING MainThread:50951 [internal.py:wandb_internal():146] Internal process interrupt: 1

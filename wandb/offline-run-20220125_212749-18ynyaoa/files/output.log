@@ -1,0 +1,16 @@
+>>> START RUNNING:  - Train mode:  - Dataset: mnist
+Init State dim 6
+Init Action dim 4
+ROUND:  0
+[1, 1]
+  0% 0/1000 [00:50<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 323, in <module>
+    main(args)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/train.py", line 229, in main
+    dqn_weights = agent.get_action(delta_loss, num_cli, start_loss, final_loss, std_local_losses, local_n_sample,
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/ddpg_agent/ddpg.py", line 143, in get_action
+    state = get_state_new(delta_loss, std_local_losses, local_n_samples, num_cli)
+  File "/Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/ddpg_agent/utils.py", line 24, in get_state_new
+    delta_loss = np.asarray(delta_loss).reshape((num_cli, 1))
+TypeError: 'list' object cannot be interpreted as an integer

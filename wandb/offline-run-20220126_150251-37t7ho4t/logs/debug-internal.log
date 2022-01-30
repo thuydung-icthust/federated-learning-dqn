@@ -1,0 +1,13 @@
+2022-01-26 15:03:00,523 INFO    MainThread:75526 [internal.py:wandb_internal():87] W&B internal server running at pid: 75526, started at: 2022-01-26 15:03:00.522324
+2022-01-26 15:03:00,526 INFO    WriterThread:75526 [datastore.py:open_for_write():77] open: /Users/thuydungnguyen/workspace/LAB/DQN-FL/LongND-FL-Parallel-Computing/wandb/offline-run-20220126_150251-37t7ho4t/run-37t7ho4t.wandb
+2022-01-26 15:03:00,527 DEBUG   HandlerThread:75526 [handler.py:handle_request():130] handle_request: run_start
+2022-01-26 15:03:00,533 DEBUG   HandlerThread:75526 [meta.py:__init__():40] meta init
+2022-01-26 15:03:00,533 DEBUG   HandlerThread:75526 [meta.py:__init__():54] meta init done
+2022-01-26 15:03:00,533 DEBUG   HandlerThread:75526 [meta.py:probe():214] probe
+2022-01-26 15:03:00,552 DEBUG   HandlerThread:75526 [meta.py:_setup_git():204] setup git
+2022-01-26 15:03:00,644 DEBUG   HandlerThread:75526 [meta.py:_setup_git():211] setup git done
+2022-01-26 15:03:00,647 DEBUG   HandlerThread:75526 [meta.py:_save_pip():58] save pip
+2022-01-26 15:03:00,649 DEBUG   HandlerThread:75526 [meta.py:_save_pip():72] save pip done
+2022-01-26 15:03:00,649 DEBUG   HandlerThread:75526 [meta.py:_save_conda():79] save conda
+2022-01-26 15:03:10,747 DEBUG   HandlerThread:75526 [meta.py:_save_conda():89] save conda done
+2022-01-26 15:03:10,748 DEBUG   HandlerThread:75526 [meta.py:probe():252] probe done
