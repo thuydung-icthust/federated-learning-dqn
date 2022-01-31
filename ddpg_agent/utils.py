@@ -28,6 +28,12 @@ def get_state_new(delta_loss, std_local_losses, num_samples, num_cli):
     retval = np.hstack((delta_loss, std_local_losses, normalized_samples)).flatten()
     return retval
 
+def get_state_new_v2(train_seq, num_samples, num_cli):
+    train_seq = np.asarray(train_seq)
+    num_samples = np.asarray(num_samples).reshape((len(num_samples), 1))
+    normalized_samples = num_samples / (np.sum(num_samples))
+    retval = np.hstack((train_seq, normalized_samples))
+    return retval
 
 def get_state(start_loss, final_loss, std_local_losses, epochs, num_samples, clients_id):
     # losses = np.asarray(losses).reshape((len(epochs), 1))

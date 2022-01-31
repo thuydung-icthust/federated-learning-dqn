@@ -60,11 +60,15 @@ class DDPG_Agent(nn.Module):
         print("Init State dim", state_dim)
         print("Init Action dim", action_dim)
 
-        self.value_net = ValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double() # 30 + 30 = 60 as input
-        self.policy_net = PolicyNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
+        # self.value_net = ValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double() # 30 + 30 = 60 as input
+        self.value_net = LSTMValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double() # 30 + 30 = 60 as input
+        # self.policy_net = PolicyNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
+        self.policy_net = LSTMPolicyNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
 
-        self.target_value_net = ValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
-        self.target_policy_net = PolicyNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
+        # self.target_value_net = ValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
+        self.target_value_net = LSTMValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
+        # self.target_policy_net = PolicyNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
+        self.target_policy_net = LSTMPolicyNetwork(state_dim, action_dim, hidden_dim).to(self.device).double()
 
         # store all the (s, a, s', r) during the transition process
         self.memory = Memory()
@@ -135,6 +139,43 @@ class DDPG_Agent(nn.Module):
         # reach to maximum step for each episode or get the done for this iteration
         # state = get_state(start_loss = start_loss, final_loss = final_loss, std_local_losses=std_local_losses,epochs=local_num_epochs, num_samples=local_n_samples, clients_id=clients_id)
         state = get_state_new(delta_loss, std_local_losses, local_n_samples, num_cli)
+
+        if self.frame_idx >= self.max_frames:
+            # maybe stop training?
+            self.logging_per_round()
+            state = self.reset_state()
+
+        # state = torch.DoubleTensor(state).unsqueeze(0).cuda()  # current state
+        state = torch.DoubleTensor(state).unsqueeze(0).to(self.device)  # current state
+        if prev_reward is not None:
+            self.memory.update(r=prev_reward)
+
+        action = self.policy_net.get_action(state)
+        action = self.ou_noise.get_action(action, self.step)
+        self.memory.act(state, action)
+
+        # if self.step < self.max_steps:
+        if self.memory.get_last_record() is None:
+            self.step += 1
+            self.frame_idx += 1
+            return action
+
+        s, a, r, s_next = self.memory.get_last_record()
+        self.replay_buffer.push(s, a, r, s_next, done)
+
+        if len(self.replay_buffer) >= self.batch_size:
+            self.ddpg_update()
+
+        self.episode_reward += prev_reward
+        self.frame_idx += 1
+        self.step += 1
+
+        return action
+
+    def get_action_v2(self, num_cli, local_inf_loss, local_n_samples, local_num_epochs, done, clients_id=None, prev_reward= None):
+        # reach to maximum step for each episode or get the done for this iteration
+        # state = get_state(start_loss = start_loss, final_loss = final_loss, std_local_losses=std_local_losses,epochs=local_num_epochs, num_samples=local_n_samples, clients_id=clients_id)
+        state = get_state_new_v2(local_inf_loss, local_n_samples, num_cli)
 
         if self.frame_idx >= self.max_frames:
             # maybe stop training?

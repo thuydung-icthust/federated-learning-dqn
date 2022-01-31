@@ -134,7 +134,7 @@ def main(args):
 
     # >>>> SERVER: INITIALIZE MODEL
     # This is dimensions' configurations for the DQN agent
-    state_dim = args.clients_per_round * 3  # each agent {start_loss, end_loss, } = 30
+    state_dim = args.clients_per_round * (args.num_epochs + 1)  # each agent {start_loss, end_loss, } = 30
     # plus action for numbers of epochs for each client
     action_dim = args.clients_per_round * 1 # = 10
     # action_dim = args.clients_per_round * 4  # = 10
@@ -173,7 +173,7 @@ def main(args):
         list_abiprocess = [list_client[i].abiprocess for i in train_clients]
         local_n_sample = np.array([list_client[i].n_samples for i in train_clients]) * \
             np.array([list_client[i].eps for i in train_clients])
-        local_inference_loss = torch.zeros(len(train_client), 2)
+        local_inference_loss = torch.zeros(len(train_client), args.num_epochs)
         local_inference_loss.share_memory_()
         print("ROUND: ", round)
         print([list_client[i].eps for i in train_clients])
@@ -207,8 +207,8 @@ def main(args):
         else:
             done = 0
             num_cli = len(train_clients)
-            _, _, std_local_losses = get_mean_losses(
-                train_local_loss, num_cli)
+            # _, _, std_local_losses = get_mean_losses(
+            #     train_local_loss, num_cli)
             start_loss = [local_inference_loss[i,0] for i in range(num_cli)]
             final_loss = [local_inference_loss[i,1] for i in range(num_cli)]
             if round:
@@ -226,7 +226,10 @@ def main(args):
                     "max-min": np_infer_server_loss.max() - np_infer_server_loss.min()
                 }
                 wandb.log({'dqn_inside/reward': sample})
-            dqn_weights = agent.get_action(num_cli, delta_loss, start_loss, final_loss, std_local_losses, local_n_sample,
+            # dqn_weights = agent.get_action(num_cli, delta_loss, start_loss, final_loss, std_local_losses, local_n_sample,
+            #                                dqn_list_epochs, done, clients_id=train_clients, prev_reward=prev_reward)
+            
+            dqn_weights = agent.get_action_v2(num_cli, local_inference_loss, local_n_sample,
                                            dqn_list_epochs, done, clients_id=train_clients, prev_reward=prev_reward)
          
             s_means, s_std, s_epochs, assigned_priorities = standardize_weights(dqn_weights, num_cli)

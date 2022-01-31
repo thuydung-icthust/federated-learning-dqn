@@ -35,8 +35,8 @@ def train(args):
     model = model.to(device)
     train_dataloader = client.train_dataloader
     # local_model = copy.deepcopy(model).cuda()
-    _, start_inference_loss = test(model, train_dataloader)
-    local_inference_loss[id,0] = start_inference_loss
+    # _, start_inference_loss = test(model, train_dataloader)
+    # local_inference_loss[id,0] = start_inference_loss
     local_model = copy.deepcopy(model).to(device)
     optimizer = torch.optim.SGD(local_model.parameters(), lr=client.lr)
     criterion = nn.CrossEntropyLoss()
@@ -67,9 +67,10 @@ def train(args):
         ep_loss += train_loss / len(train_dataloader)
         # print(f"Client : {pid} Number sample : {client.n_samples} Epoch : {i}   Ep loss : {train_loss/len(train_dataloader)}")
         train_local_loss[id, i] = ep_loss
-
-    _, final_inference_loss = test(local_model, train_dataloader)
-    local_inference_loss[id,1] = final_inference_loss
+        local_inference_loss[id, i] = ep_loss
+        
+    # _, final_inference_loss = test(local_model, train_dataloader)
+    # local_inference_loss[id,1] = final_inference_loss
     local_model_weight[id] = flatten_model(local_model)
 
 
