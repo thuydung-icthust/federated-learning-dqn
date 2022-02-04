@@ -1,0 +1,29 @@
+>>> START RUNNING: FedRL-Fixed-Quantitative-Non-IID-01-dung-lstm - Train mode: RL-Fixed - Dataset: fashionmnist
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/train-images-idx3-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/train-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/train-labels-idx1-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/train-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Init State dim 60
+Init Action dim 10
+26422272it [00:17, 1532676.04it/s]
+29696it [00:00, 164642.10it/s]
+4422656it [00:02, 1751556.13it/s]
+6144it [00:00, 14844357.01it/s]
+Traceback (most recent call last):
+  File "/home/aimenext/dungnt/federated-learning-dqn/train.py", line 326, in <module>
+    main(args)
+  File "/home/aimenext/dungnt/federated-learning-dqn/train.py", line 142, in main
+    agent = DDPG_Agent(state_dim=state_dim, action_dim=action_dim, log_dir=args.log_dir, beta=args.beta, hidden_dim = args.hidden_dim,
+  File "/home/aimenext/dungnt/federated-learning-dqn/ddpg_agent/ddpg.py", line 64, in __init__
+    self.value_net = LSTMValueNetwork(state_dim, action_dim, hidden_dim).to(self.device).double() # 30 + 30 = 60 as input
+  File "/home/aimenext/dungnt/federated-learning-dqn/ddpg_agent/networks.py", line 31, in __init__
+    super(ValueNetwork, self).__init__()
+TypeError: super(type, obj): obj must be an instance or subtype of type

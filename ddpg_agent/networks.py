@@ -28,7 +28,7 @@ class ValueNetwork(nn.Module):
 
 class LSTMValueNetwork(nn.Module):
     def __init__(self, num_inputs, num_actions, hidden_size, init_w=1e-1):
-        super(ValueNetwork, self).__init__()
+        super(LSTMValueNetwork, self).__init__()
         self.series_extractor = nn.LSTM(input_size=num_inputs - 1, hidden_size=hidden_size, num_layers=1, batch_first=True)
 
         self.non_series_extractor = nn.Sequential(
