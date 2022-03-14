@@ -20,12 +20,13 @@ def plot(frame_idx, rewards):
     plt.show()
 
 
-def get_state_new(delta_loss, std_local_losses, num_samples, num_cli):
-    delta_loss = np.asarray(delta_loss).reshape((num_cli, 1))
+def get_state_new(start_loss, std_local_losses, valid_losses, num_samples, num_cli):
+    start_loss = np.asarray(start_loss).reshape((num_cli, 1))
+    valid_loss = np.asarray(valid_losses).reshape((num_cli, 1))
     std_local_losses = np.asarray(std_local_losses).reshape((num_cli, 1))
     num_samples = np.asarray(num_samples).reshape((len(num_samples), 1))
-    normalized_samples = num_samples / (np.sum(num_samples))
-    retval = np.hstack((delta_loss, std_local_losses, normalized_samples)).flatten()
+    # normalized_samples = num_samples / (np.sum(num_samples))
+    retval = np.hstack((start_loss, valid_loss)).flatten()
     return retval
 
 

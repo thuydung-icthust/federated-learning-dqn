@@ -180,6 +180,18 @@ def standardize_weights(dqn_weights, n_models):
     
     return s_means.numpy(), s_means.numpy(), s_epochs.numpy(), assigned_priorities.numpy()
 
+def standardize_action(dqn_weights, n_models, threshold = 0.2):
+    s_func = nn.Softmax(dim=0)
+    impact_factors = [dqn_weights[0, cli] for cli in range(n_models)]
+    impact_factors = np.asarray(s_func(torch.FloatTensor(impact_factors)))
+    negative_factors_cnt = int(threshold * n_models)
+    sorted_impact_factors_indx = np.argsort(impact_factors)
+    # final_action = [1 for _ in range(n_models)]
+    negative_factors = sorted_impact_factors_indx[:negative_factors_cnt]
+    return negative_factors
+    
+    # impact_factors = impact_factors[np.argsort(-impact_factors)][:positive_factors_cnt]   
+    
 
 def standardize_weights_test(next_epoch, impact_factor, noise):
 
@@ -190,9 +202,13 @@ def standardize_weights_test(next_epoch, impact_factor, noise):
     return s_means.numpy(), s_std.numpy(), s_epochs.numpy(), assigned_priorities.numpy()
 
 
-def aggregate(local_weight, n_models, assigned_priorities):
-    ratio = torch.Tensor(np.array(assigned_priorities))
-    return torch.squeeze(ratio.t() @ local_weight)
+def aggregate(local_weight, n_models, negative_models, valid_losses):
+    init_w = [1/n_models for _ in range(n_models)]
+    for mod in negative_models:
+        init_w[mod] *= (1/valid_losses[mod])
+    w = init_w/sum(init_w)
+    ratio = torch.Tensor(np.array(w))
+    return torch.squeeze(ratio.t() @ local_weight), w
 
 
 def aggregate_benchmark(local_weight, n_models):
@@ -304,12 +320,13 @@ def getLoggingDictionary(sample, num_clients):
     return client_dicts
 
 
-def getDictionaryLosses(start_loss, final_loss, num_clients):
+def getDictionaryLosses(start_loss, final_loss, valid_loss, num_clients):
     client_dicts = {}
     for cli in range(num_clients):
         cli_dict = {}
         cli_dict["local_inference_loss"] = final_loss[cli]
         cli_dict["server_inference_loss"] = start_loss[cli]
+        cli_dict["valid_loss"] = valid_loss[cli]
         client_dicts[cli] = cli_dict
     return client_dicts
 

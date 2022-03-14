@@ -30,10 +30,11 @@ def test_local(args):
 
 def train(args):
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-    (id, pid, model, client, local_model_weight, train_local_loss, local_inference_loss, algorithm) = args
+    (id, pid, model, client, local_model_weight, train_local_loss, local_inference_loss, algorithm, valid_local_loss) = args
     # model = model.cuda()
     model = model.to(device)
     train_dataloader = client.train_dataloader
+    valid_dataloader = client.valid_dataloader
     # local_model = copy.deepcopy(model).cuda()
     _, start_inference_loss = test(model, train_dataloader)
     local_inference_loss[id,0] = start_inference_loss
@@ -69,7 +70,9 @@ def train(args):
         train_local_loss[id, i] = ep_loss
 
     _, final_inference_loss = test(local_model, train_dataloader)
+    _, valid_loss = test(local_model, valid_dataloader)
     local_inference_loss[id,1] = final_inference_loss
+    valid_local_loss[id] = valid_loss
     local_model_weight[id] = flatten_model(local_model)
 
 

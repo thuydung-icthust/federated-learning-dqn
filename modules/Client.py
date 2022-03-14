@@ -17,11 +17,12 @@ class Client(object):
         lr,
         epochs,
         mu,
+        valid_dataset,
         algorithm="fedprox",
     ):
         super().__init__()
         self.train_dataloader = DataLoader(CustomDataset(dataset, list_idx_sample[idx]), batch_size=batch_size, shuffle=True)
-        
+        self.valid_dataloader = DataLoader(CustomDataset(valid_dataset), batch_size=batch_size, shuffle=False)
         self.algorithm = algorithm
         self.lr = lr
         self.eps = epochs

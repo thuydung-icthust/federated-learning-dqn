@@ -45,6 +45,7 @@ from models.vgg import vgg11
 from ddpg_agent.ddpg import *
 import wandb
 import warnings
+from utils.gendata import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -76,12 +77,19 @@ def load_dataset(dataset_name, path_data_idx):
 
         test_dataset = datasets.FashionMNIST("./data/fashionmnist/", train=False, download=True,
                                         transform=transforms_mnist)
-        list_idx_sample = load_dataset_idx(path_data_idx)
+        train_set_size = int(len(train_dataset) * 0.8)
+        valid_set_size = len(train_dataset) - train_set_size
+        train_set, valid_set = torch.utils.data.random_split(
+            train_dataset, [train_set_size, valid_set_size])
+        path_to_file_json = get_data_index(train_set)
+        # list_idx_sample = load_dataset_idx(path_data_idx)
+        list_idx_sample = load_dataset_idx(path_to_file_json)
+        
     else:
         warnings.warn("Dataset not supported")
         exit()
 
-    return train_dataset, test_dataset, list_idx_sample
+    return train_dataset, test_dataset, list_idx_sample, valid_set
 
 
 def init_model(dataset_name):
@@ -111,7 +119,7 @@ def main(args):
     assert len(list_abiprocess_client) == args.num_clients, "not enough abi-processes"
 
     # >>>> START: LOAD DATASET & INIT MODEL
-    train_dataset, test_dataset, list_idx_sample = load_dataset(args.dataset_name, args.path_data_idx)
+    train_dataset, test_dataset, list_idx_sample, valid_set = load_dataset(args.dataset_name, args.path_data_idx)
     client_model = init_model(args.dataset_name)
     n_params = count_params(client_model)
     prev_reward = None
@@ -126,6 +134,7 @@ def main(args):
             lr=args.learning_rate,
             epochs=args.num_epochs,
             mu=args.mu,
+            valid_dataset=valid_set,
         )
         for idx in range(args.num_clients)
     ]
@@ -134,7 +143,7 @@ def main(args):
 
     # >>>> SERVER: INITIALIZE MODEL
     # This is dimensions' configurations for the DQN agent
-    state_dim = args.clients_per_round * 3  # each agent {start_loss, end_loss, } = 30
+    state_dim = args.clients_per_round * 2  # each agent {start_loss, end_loss, } = 30
     # plus action for numbers of epochs for each client
     action_dim = args.clients_per_round * 1 # = 10
     # action_dim = args.clients_per_round * 4  # = 10
@@ -168,7 +177,9 @@ def main(args):
         local_model_weight.share_memory_()
 
         train_local_loss = torch.zeros(len(train_client), 100)
+        valid_local_loss = torch.zeros(len(train_client))
         train_local_loss.share_memory_()
+        valid_local_loss.share_memory_()
         list_trained_client.append(train_clients)
         list_abiprocess = [list_client[i].abiprocess for i in train_clients]
         local_n_sample = np.array([list_client[i].n_samples for i in train_clients]) * \
@@ -192,6 +203,7 @@ def main(args):
                     train_local_loss,
                     local_inference_loss,
                     args.algorithm,
+                    valid_local_loss,
                 )
                 for i in range(len(train_clients))
             ],
@@ -227,16 +239,17 @@ def main(args):
                 }
                 wandb.log({'dqn_inside/reward': sample})
             dqn_weights = agent.get_action(num_cli, delta_loss, start_loss, final_loss, std_local_losses, local_n_sample,
-                                           dqn_list_epochs, done, clients_id=train_clients, prev_reward=prev_reward)
+                                           dqn_list_epochs, done, clients_id=train_clients, prev_reward=prev_reward, valid_losses = valid_local_loss)
          
-            s_means, s_std, s_epochs, assigned_priorities = standardize_weights(dqn_weights, num_cli)
+            # s_means, s_std, s_epochs, assigned_priorities = standardize_weights(dqn_weights, num_cli)
+            negative_models = standardize_weights(dqn_weights, num_cli)
 
-            flat_tensor = aggregate(local_model_weight, len(train_clients), assigned_priorities)
+            flat_tensor, w = aggregate(local_model_weight, len(train_clients), negative_models, valid_local_loss)
             # get_delta_weights(local_model_weight, flatten_model(client_model))
             # Update epochs
-            if args.train_mode == "RL-Hybrid":
-                dqn_list_epochs = s_epochs
-                load_epoch(list_client, dqn_list_epochs)
+            # if args.train_mode == "RL-Hybrid":
+            #     dqn_list_epochs = s_epochs
+            #     load_epoch(list_client, dqn_list_epochs)
 
         client_model.load_state_dict(unflatten_model(flat_tensor, client_model))
         # >>>> Test model
@@ -259,7 +272,7 @@ def main(args):
             wandb.log({'test_acc': acc, 'summary/summary': logging})
 
         else:
-            dictionaryLosses = getDictionaryLosses(start_l, final_l, num_cli)
+            dictionaryLosses = getDictionaryLosses(start_l, final_l, valid_local_loss, num_cli)
             logging = {
                 "round": round + 1,
                 "clients_per_round": args.clients_per_round,
@@ -270,10 +283,11 @@ def main(args):
                 "test_loss": test_loss,
             }
             dqn_sample = {
-                "means": s_means,
-                "std": s_std,
-                "num_epochs": s_epochs,
-                "assigned_priorities": assigned_priorities,
+                # "means": s_means,
+                # "std": s_std,
+                # "num_epochs": s_epochs,
+                "assigned_priorities": dqn_weights,
+                "w": w,
             }
             recordedSample = getLoggingDictionary(dqn_sample, num_cli)
             wandb.log({'test_acc': acc, 'dqn/dqn_sample': recordedSample, 'summary/summary': logging})
@@ -285,7 +299,7 @@ if __name__ == "__main__":
     torch.multiprocessing.set_start_method('spawn')
     parse_args = option()
 
-    wandb.init(project="federated-learning-dqn",
+    wandb.init(project="federated-learning-dqn-dungnt",
                entity="aiotlab",
                name=parse_args.run_name,
                group=parse_args.group_name,
