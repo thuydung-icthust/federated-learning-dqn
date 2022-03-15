@@ -1,0 +1,108 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.9
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    m:
+    - 1: test_acc
+      6:
+      - 3
+      7:
+      - 2
+    python_version: 3.8.12
+    start_time: 1647318582
+    t:
+      1:
+      - 1
+      - 5
+      2:
+      - 1
+      - 5
+      3:
+      - 7
+      - 13
+      - 16
+      4: 3.8.12
+      5: 0.12.9
+      8:
+      - 2
+      - 5
+algorithm:
+  desc: null
+  value: ''
+batch_size:
+  desc: null
+  value: 10
+batch_size_ddpg:
+  desc: null
+  value: 4
+beta:
+  desc: null
+  value: 0.45
+clients_per_round:
+  desc: null
+  value: 6
+dataset_name:
+  desc: null
+  value: fashionmnist
+drop_percent:
+  desc: null
+  value: 0.0
+gamma:
+  desc: null
+  value: 0.99
+hidden_dim:
+  desc: null
+  value: 256
+init_w:
+  desc: null
+  value: 0.001
+learning_rate:
+  desc: null
+  value: 0.01
+log_dir:
+  desc: null
+  value: ./
+max_frames:
+  desc: null
+  value: 12000
+max_steps:
+  desc: null
+  value: 800
+mu:
+  desc: null
+  value: 0.01
+num_clients:
+  desc: null
+  value: 6
+num_core:
+  desc: null
+  value: 6
+num_epochs:
+  desc: null
+  value: 5
+num_rounds:
+  desc: null
+  value: 1000
+path_data_idx:
+  desc: null
+  value: dataset_idx/fashionmnist/6client/FashionMNIST-mnist_nonidd_1.json
+policy_lr:
+  desc: null
+  value: 0.0001
+seed:
+  desc: null
+  value: 10
+soft_tau:
+  desc: null
+  value: 0.02
+train_mode:
+  desc: null
+  value: benchmark
+value_lr:
+  desc: null
+  value: 0.001

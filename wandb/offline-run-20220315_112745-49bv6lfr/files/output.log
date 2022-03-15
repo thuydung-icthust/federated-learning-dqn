@@ -1,0 +1,10 @@
+
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: fashionmnist
+Traceback (most recent call last):
+  File "train.py", line 338, in <module>
+    main(args)
+  File "train.py", line 122, in main
+    train_dataset, test_dataset, list_idx_sample, valid_set = load_dataset(args.dataset_name, args.path_data_idx)
+  File "train.py", line 83, in load_dataset
+    train_dataset, [train_set_size, valid_set_size])
+NameError: name 'train_set_size' is not defined
