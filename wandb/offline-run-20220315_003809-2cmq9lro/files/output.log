@@ -1,0 +1,14 @@
+>>> START RUNNING: upgrade-v1.0-Equal-Non-IID-01 - Train mode: RL-Fixed - Dataset: fashionmnist
+6
+Traceback (most recent call last):
+  File "train.py", line 337, in <module>
+    main(args)
+  File "train.py", line 122, in main
+    train_dataset, test_dataset, list_idx_sample, valid_set = load_dataset(args.dataset_name, args.path_data_idx)
+  File "train.py", line 84, in load_dataset
+    path_to_file_json = get_data_index(train_dataset, train_set)
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/gendata.py", line 545, in get_data_index
+    client_dict = mnist_noniid(train_dataset, valid_set, num_users)
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/gendata.py", line 23, in mnist_noniid
+    labels = train_dataset.targets.numpy()[idxs]
+NameError: name 'train_dataset' is not defined

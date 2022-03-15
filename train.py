@@ -81,7 +81,7 @@ def load_dataset(dataset_name, path_data_idx):
         valid_set_size = len(train_dataset) - train_set_size
         train_set, valid_set = torch.utils.data.random_split(
             train_dataset, [train_set_size, valid_set_size])
-        path_to_file_json = get_data_index(train_set)
+        path_to_file_json = get_data_index(train_dataset, train_set)
         # list_idx_sample = load_dataset_idx(path_data_idx)
         list_idx_sample = load_dataset_idx(path_to_file_json)
         

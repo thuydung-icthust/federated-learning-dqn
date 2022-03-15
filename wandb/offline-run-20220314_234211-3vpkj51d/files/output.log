@@ -1,0 +1,32 @@
+>>> START RUNNING: upgrade-v1.0-Equal-Non-IID-01 - Train mode: RL-Fixed - Dataset: fashionmnist
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/train-images-idx3-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/train-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/train-labels-idx1-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/train-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+Extracting ./data/fashionmnist/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to ./data/fashionmnist/FashionMNIST/raw
+6
+26422272it [00:24, 1060607.54it/s]
+29696it [00:00, 164076.03it/s]
+4422656it [00:04, 1064420.26it/s]
+6144it [00:00, 17747798.74it/s]
+Traceback (most recent call last):
+  File "train.py", line 337, in <module>
+    main(args)
+  File "train.py", line 122, in main
+    train_dataset, test_dataset, list_idx_sample, valid_set = load_dataset(args.dataset_name, args.path_data_idx)
+  File "train.py", line 84, in load_dataset
+    path_to_file_json = get_data_index(train_set)
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/gendata.py", line 544, in get_data_index
+    client_dict = mnist_noniid(train_dataset, num_users)
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/gendata.py", line 22, in mnist_noniid
+    labels = dataset.targets.numpy()
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 83, in __getattr__
+    raise AttributeError
+AttributeError

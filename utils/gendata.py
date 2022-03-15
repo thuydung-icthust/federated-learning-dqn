@@ -6,7 +6,7 @@ import numpy as np
 import torch
 
 
-def mnist_noniid(dataset, num_users):
+def mnist_noniid(dataset, train_set, num_users):
     """
     Sample non-I.I.D client data from MNIST dataset
     :param dataset:
@@ -15,11 +15,12 @@ def mnist_noniid(dataset, num_users):
     """
     print(num_users)
     # 60,000 training imgs -->  200 imgs/shard X 300 shards
-    num_shards, num_imgs = 200, int(len(dataset)/200)
+    num_shards, num_imgs = 200, int(len(train_set)/200)
     idx_shard = [i for i in range(num_shards)]
     dict_users = {i: np.array([]) for i in range(num_users)}
-    idxs = np.arange(num_shards * num_imgs)
-    labels = dataset.targets.numpy()
+    idxs = np.arange(len(train_set)) 
+    idxs = list(train_set.indices)
+    labels = dataset.targets.numpy()[idxs]
 
     # sort labels
     idxs_labels = np.vstack((idxs, labels))
@@ -535,13 +536,13 @@ def fashionmnist_noniid_featured(dataset, num_users):
     return dict_client
 
 
-def get_data_index(train_dataset, split_type = "mnist_nonidd", num_users = 6, index = 1):
+def get_data_index(train_dataset, valid_set, split_type = "mnist_nonidd", num_users = 6, index = 1):
     # client_dict = poreto_noniid(train_dataset, num_users)
     client_dict = {}
     path_to_file_json = f"dataset_idx/fashionmnist/{num_users}client/FashionMNIST-{split_type}_{index}.json"
     path_to_file_csv = f"dataset_idx/fashionmnist/{num_users}client/FashionMNIST-{split_type}_{index}.csv"
     if split_type == "mnist_nonidd":
-        client_dict = mnist_noniid(train_dataset, num_users)
+        client_dict = mnist_noniid(train_dataset, valid_set, num_users)
     save_dataset_idx(client_dict, path_to_file_json)
     df = sta(client_dict, train_dataset, num_users)
     df.to_csv(path_to_file_csv)

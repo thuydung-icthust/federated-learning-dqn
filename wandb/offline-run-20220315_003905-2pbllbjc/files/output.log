@@ -1,0 +1,19 @@
+>>> START RUNNING: upgrade-v1.0-Equal-Non-IID-01 - Train mode: RL-Fixed - Dataset: fashionmnist
+6
+0
+1
+2
+3
+4
+5
+<<<< STA
+Traceback (most recent call last):
+  File "train.py", line 337, in <module>
+    main(args)
+  File "train.py", line 127, in main
+    list_client = [
+  File "train.py", line 128, in <listcomp>
+    Client(
+  File "/mnt/disk1/dungnt/federated-learning-dqn/modules/Client.py", line 25, in __init__
+    self.valid_dataloader = DataLoader(CustomDataset(valid_dataset), batch_size=batch_size, shuffle=False)
+TypeError: __init__() missing 1 required positional argument: 'idxs'
