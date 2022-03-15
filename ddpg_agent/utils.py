@@ -53,12 +53,14 @@ def get_state(start_loss, final_loss, std_local_losses, epochs, num_samples, cli
         (normalized_start_loss, normalized_final_loss, normalized_samples)).flatten()
     return retval
 
-def get_reward(losses, beta=0.45):
+def get_reward(acc, beta=0.45):
     # beta = 0.45
-    losses = np.asarray(losses)
+    target_acc = 99.0
+    grow_constant = 64.0
+    # losses = np.asarray(losses)
     # return - beta * np.mean(losses) - (1 - beta) * np.std(losses)
-    return - np.mean(losses) - (losses.max() - losses.min())
-
+    # return - np.mean(losses) - (losses.max() - losses.min())
+    return grow_constant**(target_acc-acc) - 1
 
 def get_info_from_dqn_weights(weights, num_clients, dqn_list_epochs):
     client_dicts = {}

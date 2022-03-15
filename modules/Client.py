@@ -22,7 +22,9 @@ class Client(object):
     ):
         super().__init__()
         self.train_dataloader = DataLoader(CustomDataset(dataset, list_idx_sample[idx]), batch_size=batch_size, shuffle=True)
-        self.valid_dataloader = DataLoader(CustomDataset(valid_dataset, valid_dataset.indices), batch_size=batch_size, shuffle=False)
+        self.valid_dataloader = DataLoader(CustomDataset(dataset, valid_dataset.indices), batch_size=batch_size, shuffle=False)
+        # self.valid_dataloader = valid_dataset
+        
         self.algorithm = algorithm
         self.lr = lr
         self.eps = epochs

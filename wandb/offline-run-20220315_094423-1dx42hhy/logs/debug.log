@@ -1,0 +1,28 @@
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [wandb_setup.py:_flush():71] setting env: {}
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [wandb_init.py:_log_setup():371] Logging user logs to /mnt/disk1/dungnt/federated-learning-dqn/wandb/offline-run-20220315_094423-1dx42hhy/logs/debug.log
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [wandb_init.py:_log_setup():372] Logging internal logs to /mnt/disk1/dungnt/federated-learning-dqn/wandb/offline-run-20220315_094423-1dx42hhy/logs/debug-internal.log
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [wandb_init.py:init():404] calling init triggers
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [wandb_init.py:init():409] wandb.init called with sweep_config: {}
+config: {'num_rounds': 1000, 'num_clients': 6, 'clients_per_round': 6, 'batch_size': 10, 'num_epochs': 5, 'path_data_idx': 'dataset_idx/fashionmnist/equal/FashionMNIST-noniid-fedavg-equal_1.json', 'learning_rate': 0.01, 'algorithm': '', 'mu': 0.01, 'seed': 10, 'drop_percent': 0.0, 'num_core': 6, 'log_dir': './', 'train_mode': 'RL-Fixed', 'dataset_name': 'fashionmnist', 'beta': 0.45, 'hidden_dim': 256, 'init_w': 0.001, 'value_lr': 0.001, 'policy_lr': 0.0001, 'max_steps': 800, 'max_frames': 12000, 'batch_size_ddpg': 4, 'gamma': 0.99, 'soft_tau': 0.02}
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [wandb_init.py:init():460] starting backend
+2022-03-15 09:44:23,358 INFO    MainThread:45724 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-03-15 09:44:23,368 INFO    MainThread:45724 [backend.py:ensure_launched():216] starting backend process...
+2022-03-15 09:44:23,375 INFO    MainThread:45724 [backend.py:ensure_launched():221] started backend process with pid: 45942
+2022-03-15 09:44:23,377 INFO    MainThread:45724 [wandb_init.py:init():469] backend started and connected
+2022-03-15 09:44:23,382 INFO    MainThread:45724 [wandb_init.py:init():533] updated telemetry
+2022-03-15 09:44:23,406 INFO    MainThread:45724 [wandb_init.py:init():606] starting run threads in backend
+2022-03-15 09:44:28,408 INFO    MainThread:45724 [wandb_run.py:_console_start():1810] atexit reg
+2022-03-15 09:44:28,409 INFO    MainThread:45724 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-03-15 09:44:28,410 INFO    MainThread:45724 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-03-15 09:44:28,414 INFO    MainThread:45724 [wandb_run.py:_redirect():1745] Redirects installed.
+2022-03-15 09:44:28,415 INFO    MainThread:45724 [wandb_init.py:init():633] run started, returning control to user process
+2022-03-15 09:44:43,890 INFO    MainThread:45724 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 1
+2022-03-15 09:44:43,896 INFO    MainThread:45724 [wandb_run.py:_restore():1752] restore
+2022-03-15 09:44:45,974 INFO    MainThread:45724 [wandb_run.py:_wait_for_finish():1912] got exit ret: 
+2022-03-15 09:44:46,204 INFO    MainThread:45724 [wandb_run.py:_wait_for_finish():1912] got exit ret: 
+2022-03-15 09:44:46,307 INFO    MainThread:45724 [wandb_run.py:_wait_for_finish():1912] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+

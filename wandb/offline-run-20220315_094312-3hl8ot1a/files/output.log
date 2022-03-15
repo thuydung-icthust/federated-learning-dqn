@@ -1,0 +1,48 @@
+>>> START RUNNING: upgrade-v1.0-Equal-Non-IID-01 - Train mode: RL-Fixed - Dataset: fashionmnist
+6
+0
+1
+2
+3
+4
+5
+<<<< STA
+Init State dim 12
+Init Action dim 6
+ROUND:  0
+[5, 5, 5, 5, 5, 5]
+  0%|                                                             | 0/1000 [00:05<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/trainer.py", line 35, in train
+    model = model.to(device)
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/modules/module.py", line 899, in to
+    return self._apply(convert)
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/modules/module.py", line 570, in _apply
+    module._apply(fn)
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/modules/module.py", line 593, in _apply
+    param_applied = fn(param)
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/modules/module.py", line 897, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 337, in <module>
+    main(args)
+  File "train.py", line 194, in main
+    pool.map(
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

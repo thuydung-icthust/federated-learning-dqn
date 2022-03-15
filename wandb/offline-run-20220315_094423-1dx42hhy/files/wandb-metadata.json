@@ -1,0 +1,36 @@
+{
+    "os": "Linux-5.4.0-104-generic-x86_64-with-glibc2.17",
+    "python": "3.8.12",
+    "heartbeatAt": "2022-03-15T02:44:24.065562",
+    "startedAt": "2022-03-15T02:44:23.355482",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 4,
+    "cpu_count": 48,
+    "cuda": null,
+    "args": [
+        "--train_mode=RL-Fixed",
+        "--dataset_name=fashionmnist",
+        "--num_clients=6",
+        "--clients_per_round=6",
+        "--num_rounds=1000",
+        "--learning_rate=0.01",
+        "--batch_size=10",
+        "--num_epochs=5",
+        "--path_data_idx=dataset_idx/fashionmnist/equal/FashionMNIST-noniid-fedavg-equal_1.json",
+        "--run_name=upgrade-v1.0-Equal-Non-IID-01",
+        "--group_name=FASHION-MNIST-FedAvg-Equal"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/thuydung-icthust/federated-learning-dqn.git",
+        "commit": "f4cad04c64b1eb8dbb157705d514b1495cb4da91"
+    },
+    "email": "dataholicguy@gmail.com",
+    "root": "/mnt/disk1/dungnt/federated-learning-dqn",
+    "host": "aiotlab",
+    "username": "aiotlab",
+    "executable": "/home/aiotlab/anaconda3/envs/longvaipe/bin/python3"
+}
