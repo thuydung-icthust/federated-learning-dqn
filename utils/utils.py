@@ -205,7 +205,7 @@ def standardize_weights_test(next_epoch, impact_factor, noise):
 def aggregate(local_weight, n_models, negative_models, valid_losses):
     init_w = [1/n_models for _ in range(n_models)]
     for mod in negative_models:
-        init_w[mod] *= (1/valid_losses[mod])
+        init_w[mod] *= (1/valid_losses[mod].numpy())
     w = init_w/sum(init_w)
     ratio = torch.Tensor(np.array(w))
     return torch.squeeze(ratio.t() @ local_weight), w
@@ -312,10 +312,11 @@ def getLoggingDictionary(sample, num_clients):
     client_dicts = {}
     for cli in range(num_clients):
         cli_dict = {}
-        cli_dict["mean"] = sample["means"][cli]
-        cli_dict["std"] = sample["std"][cli]
-        cli_dict["epoch"] = sample["num_epochs"][cli]
-        cli_dict["priority"] = sample["assigned_priorities"][cli]
+        # cli_dict["mean"] = sample["means"][cli]
+        # cli_dict["std"] = sample["std"][cli]
+        # cli_dict["epoch"] = sample["num_epochs"][cli]
+        cli_dict["priority"] = sample["assigned_priorities"][0,cli]
+        cli_dict["w"] = sample["w"][cli]
         client_dicts[cli] = cli_dict
     return client_dicts
 
