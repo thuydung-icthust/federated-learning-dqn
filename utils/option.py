@@ -17,6 +17,7 @@ def option():
     parser.add_argument("--log_dir", type=str, default='./')
     parser.add_argument("--dataset_name", type=str, default="mnist")
     parser.add_argument("--path_data_idx", type=str, default="dataset_idx/mnist/equal/MNIST-noniid-fedavg_equal_1.json")
+    parser.add_argument("--path_data_valid_idx", type=str, default="dataset_idx/mnist/equal/MNIST-noniid-fedavg_equal_1.json")
     parser.add_argument("--run_name", type=str, default="")
     parser.add_argument("--group_name", type=str, default="")
     parser.add_argument("--train_mode", type=str, default="")

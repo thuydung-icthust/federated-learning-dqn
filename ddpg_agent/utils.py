@@ -55,7 +55,7 @@ def get_state(start_loss, final_loss, std_local_losses, epochs, num_samples, cli
 
 def get_reward(acc, beta=0.45):
     # beta = 0.45
-    target_acc = 99.0
+    target_acc = 0.99
     grow_constant = 64.0
     # losses = np.asarray(losses)
     # return - beta * np.mean(losses) - (1 - beta) * np.std(losses)

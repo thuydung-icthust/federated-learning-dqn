@@ -541,12 +541,15 @@ def get_data_index(train_dataset, valid_set, split_type = "mnist_nonidd", num_us
     client_dict = {}
     path_to_file_json = f"dataset_idx/fashionmnist/{num_users}client/FashionMNIST-{split_type}_{index}.json"
     path_to_file_csv = f"dataset_idx/fashionmnist/{num_users}client/FashionMNIST-{split_type}_{index}.csv"
+    path_to_valid_file_json = f"dataset_idx/fashionmnist/{num_users}client/FashionMNIST-{split_type}_valid_{index}.json"
     if split_type == "mnist_nonidd":
         client_dict = mnist_noniid(train_dataset, valid_set, num_users)
     save_dataset_idx(client_dict, path_to_file_json)
     df = sta(client_dict, train_dataset, num_users)
     df.to_csv(path_to_file_csv)
-    return path_to_file_json
+    with open(path_to_valid_file_json, "w+") as outfile:
+        json.dump(valid_set.indices, outfile)
+    return path_to_file_json, path_to_valid_file_json
 
         
         

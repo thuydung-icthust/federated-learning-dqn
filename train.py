@@ -51,7 +51,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-def load_dataset(dataset_name, path_data_idx):
+def load_dataset(dataset_name, path_data_idx, path_data_valid_idx = None):
     if dataset_name == "mnist":
         transforms_mnist = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
         train_dataset = datasets.MNIST("data/mnist/", train=True, download=True, transform=transforms_mnist)
@@ -77,13 +77,20 @@ def load_dataset(dataset_name, path_data_idx):
 
         test_dataset = datasets.FashionMNIST("./data/fashionmnist/", train=False, download=True,
                                         transform=transforms_mnist)
+        
         train_set_size = int(len(train_dataset) * 0.8)
         valid_set_size = len(train_dataset) - train_set_size
         train_set, valid_set = torch.utils.data.random_split(
             train_dataset, [train_set_size, valid_set_size])
         path_to_file_json = get_data_index(train_dataset, train_set)
-        # list_idx_sample = load_dataset_idx(path_data_idx)
-        list_idx_sample = load_dataset_idx(path_to_file_json)
+        
+        list_idx = json.load(open(path_data_valid_idx, 'r'))
+        list_idx = list(list_idx)
+        if path_data_valid_idx:
+            valid_set = datasets.Subset(train_dataset, list_idx)
+            list_idx_sample = load_dataset_idx(path_data_idx) 
+        else:
+            list_idx_sample = load_dataset_idx(path_to_file_json)
         
     else:
         warnings.warn("Dataset not supported")
@@ -331,6 +338,7 @@ if __name__ == "__main__":
                     "batch_size_ddpg": parse_args.batch_size_ddpg,
                     "gamma": parse_args.gamma,
                     "soft_tau": parse_args.soft_tau,
+                    "path_data_valid_idx": parse_args.path_data_valid_idx,
                })
     args = wandb.config
     wandb.define_metric("test_acc", summary="max")
