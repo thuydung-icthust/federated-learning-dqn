@@ -42,10 +42,12 @@ from torch.utils.data import DataLoader
 from utils.option import option
 from models.models import MNIST_CNN, CNNCifar
 from models.vgg import vgg11
+from models.resnet18 import ResNet18
 from ddpg_agent.ddpg import *
 import wandb
 import warnings
 from utils.gendata import *
+from utils.loader import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -77,21 +79,14 @@ def load_dataset(dataset_name, path_data_idx, path_data_valid_idx = None):
 
         test_dataset = datasets.FashionMNIST("./data/fashionmnist/", train=False, download=True,
                                         transform=transforms_mnist)
+
+        list_valid_idx = json.load(open(path_data_valid_idx, 'r'))
+        valid_set = datasets.Subset(train_dataset, list_valid_idx)
         
-        train_set_size = int(len(train_dataset) * 0.8)
-        valid_set_size = len(train_dataset) - train_set_size
-        train_set, valid_set = torch.utils.data.random_split(
-            train_dataset, [train_set_size, valid_set_size])
-        path_to_file_json = get_data_index(train_dataset, train_set)
-        
-        list_idx = json.load(open(path_data_valid_idx, 'r'))
-        list_idx = list(list_idx)
-        if path_data_valid_idx:
-            valid_set = datasets.Subset(train_dataset, list_idx)
-            list_idx_sample = load_dataset_idx(path_data_idx) 
-        else:
-            list_idx_sample = load_dataset_idx(path_to_file_json)
-        
+        list_idx_sample = load_dataset_idx(path_data_idx)
+    elif dataset_name == "chexpert":
+        dataset, train_dataset, valid_set, test_dataset = load_cheXpert_dataset()
+        list_idx_sample = load_dataset_idx(path_data_idx)
     else:
         warnings.warn("Dataset not supported")
         exit()
@@ -107,6 +102,8 @@ def init_model(dataset_name):
         print(model)
     elif dataset_name == "fashionmnist":
         model = MNIST_CNN()
+    elif dataset_name == "chexpert":
+        model = ResNet18()
     else:
         warnings.warn("Model not supported")
     return model

@@ -14,7 +14,8 @@ def test_local(args):
     model = model.to(device)
     local_model = copy.deepcopy(model).to(device)
     # optimizer = torch.optim.SGD(local_model.parameters(), lr=client.lr)
-    criterion = nn.CrossEntropyLoss()
+    # criterion = nn.CrossEntropyLoss()
+    criterion = nn.BCELoss()
     train_dataloader = client.train_dataloader
     train_loss = 0
     ep_loss = 0

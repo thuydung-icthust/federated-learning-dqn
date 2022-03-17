@@ -1,5 +1,5 @@
 from torch._C import device
-from utils.loader import CustomDataset
+from utils.loader import CustomDataset, CheXpertDataSet
 from torch.utils.data import DataLoader
 from torch import nn
 import torch
