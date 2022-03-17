@@ -1,0 +1,12 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Traceback (most recent call last):
+  File "train.py", line 343, in <module>
+    main(args)
+  File "train.py", line 131, in main
+    list_client = [
+  File "train.py", line 132, in <listcomp>
+    Client(
+  File "/mnt/disk1/dungnt/federated-learning-dqn/modules/Client.py", line 25, in __init__
+    self.valid_dataloader = DataLoader(CustomDataset(dataset, valid_dataset.indices), batch_size=batch_size, shuffle=False)
+AttributeError: 'DataLoader' object has no attribute 'indices'

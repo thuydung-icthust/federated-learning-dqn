@@ -1,5 +1,8 @@
 import numpy as np
-
+import csv
+from torch.utils.data.dataset import random_split
+from torch.utils.data import DataLoader
+import torch
 
 def iid_partition(dataset, clients):
     """
@@ -247,7 +250,7 @@ class CheXpertDataSet(Dataset):
                     else:
                         label[i] = 0
                         
-                image_names.append('./' + image_name)
+                image_names.append('../data/' + image_name)
                 labels.append(label)
 
         self.image_names = image_names
@@ -273,8 +276,9 @@ def find_indices(lst, condition):
 def load_cheXpert_dataset():
     # Paths to the files with training, and validation sets.
     # Each file contains pairs (path to image, output vector)
-    pathFileTrain = 'CheXpert-v1.0-small/train.csv'
-    pathFileValid = 'CheXpert-v1.0-small/valid.csv'
+    print("START LOADING CHEXPERT DATASET...")
+    pathFileTrain = '../data/CheXpert-v1.0-small/train.csv'
+    pathFileValid = '../data/CheXpert-v1.0-small/valid.csv'
 
     # Neural network parameters:
     nnIsTrained = False                 #pre-trained using ImageNet

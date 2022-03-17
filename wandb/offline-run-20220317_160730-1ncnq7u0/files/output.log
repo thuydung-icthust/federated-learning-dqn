@@ -1,0 +1,12 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Traceback (most recent call last):
+  File "train.py", line 343, in <module>
+    main(args)
+  File "train.py", line 126, in main
+    train_dataset, test_dataset, list_idx_sample, valid_set = load_dataset(args.dataset_name, args.path_data_idx)
+  File "train.py", line 88, in load_dataset
+    dataset, train_dataset, valid_set, test_dataset = load_cheXpert_dataset()
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/loader.py", line 309, in load_cheXpert_dataset
+    datasetTest, datasetTrain = random_split(dataset, [500, len(dataset) - 500])
+NameError: name 'random_split' is not defined

@@ -71,9 +71,9 @@ def train(args):
         train_local_loss[id, i] = ep_loss
 
     _, final_inference_loss = test(local_model, train_dataloader)
-    _, valid_loss = test(local_model, valid_dataloader)
+    # _, valid_loss = test(local_model, valid_dataloader)
     local_inference_loss[id,1] = final_inference_loss
-    valid_local_loss[id] = valid_loss
+    # valid_local_loss[id] = valid_loss
     local_model_weight[id] = flatten_model(local_model)
 
 
