@@ -1,0 +1,41 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Init State dim 20
+Init Action dim 10
+ROUND:  0
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+  0%|                                            | 0/1000 [00:18<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 40, in train
+    _, start_inference_loss = test(model, train_dataloader)
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 87, in test
+    for X, y in test_dataloader:
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/loader.py", line 215, in __getitem__
+    image, label = self.dataset[self.idxs[item]]
+TypeError: 'DataLoader' object is not subscriptable
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 343, in <module>
+    main(args)
+  File "train.py", line 198, in main
+    pool.map(
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+TypeError: 'DataLoader' object is not subscriptable

@@ -127,6 +127,7 @@ def main(args):
     train_dataset, test_dataset, list_idx_sample, valid_set = load_dataset(args.dataset_name, args.path_data_idx)
     client_model = init_model(args.dataset_name)
     n_params = count_params(client_model)
+    print(f"n_params: {n_params}")
     prev_reward = None
 
     list_client = [
@@ -251,11 +252,6 @@ def main(args):
             negative_models = standardize_action(dqn_weights, num_cli)
 
             flat_tensor, w = aggregate(local_model_weight, len(train_clients), negative_models, valid_local_loss)
-            # get_delta_weights(local_model_weight, flatten_model(client_model))
-            # Update epochs
-            # if args.train_mode == "RL-Hybrid":
-            #     dqn_list_epochs = s_epochs
-            #     load_epoch(list_client, dqn_list_epochs)
 
         client_model.load_state_dict(unflatten_model(flat_tensor, client_model))
         # >>>> Test model

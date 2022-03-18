@@ -14,8 +14,8 @@ def test_local(args):
     model = model.to(device)
     local_model = copy.deepcopy(model).to(device)
     # optimizer = torch.optim.SGD(local_model.parameters(), lr=client.lr)
-    # criterion = nn.CrossEntropyLoss()
-    criterion = nn.BCELoss()
+    criterion = nn.CrossEntropyLoss()
+    # criterion = nn.BCELoss()
     train_dataloader = client.train_dataloader
     train_loss = 0
     ep_loss = 0
@@ -50,7 +50,7 @@ def train(args):
         train_loss = 0.0
         for X, y in train_dataloader:
             X = X.to(device)
-            y = y.to(device)
+            y = y.to(device).to(torch.int64)
             optimizer.zero_grad()
             output = local_model(X)
 
@@ -86,11 +86,11 @@ def test(model, test_dataloader):
     loss = 0.0
     for X, y in test_dataloader:
         X = X.to(device)
-        y = y.to(device)
+        y = y.to(device).to(torch.int64)
         output = model(X)
-        print(f"output: {output}")
-        print(f"x: {X}")
-        print(f"y: {y}")
+        # print(f"output: {output}")
+        # print(f"x: {X}")
+        # print(f"y: {y}")
         
         loss += cel(output, y).item()
         output = output.argmax(-1)

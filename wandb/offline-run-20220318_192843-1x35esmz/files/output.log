@@ -1,0 +1,15 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+  0%|                                                             | 0/1000 [00:55<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 344, in <module>
+    main(args)
+  File "train.py", line 260, in main
+    client_model.load_state_dict(unflatten_model(flat_tensor, client_model))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/utils.py", line 143, in unflatten_model
+    print(f"output: {output.keys()}")
+AttributeError: 'tuple' object has no attribute 'keys'

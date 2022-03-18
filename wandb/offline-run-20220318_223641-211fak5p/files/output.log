@@ -1,0 +1,71 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+n_params: 11187158
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+output: tensor([[ 0.0810, -0.0329],
+        [ 0.2963, -0.0472],
+        [-0.0431, -0.0953],
+        [ 0.3471, -0.0936],
+        [ 0.1917, -0.0815],
+        [ 0.1802, -0.2120],
+        [ 0.0303, -0.0563],
+        [ 0.2990, -0.0491],
+        [ 0.1416, -0.0125],
+        [-0.4662, -0.0640]], device='cuda:0', grad_fn=<AddmmBackward0>)
+y: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:0')
+output: tensor([[ 0.2601, -0.0562],
+        [ 0.3075,  0.0078],
+        [ 0.0122, -0.1321],
+        [-0.0199, -0.2629],
+        [ 0.0200,  0.0385],
+        [ 0.1899, -0.0415],
+        [ 0.0593, -0.0920],
+        [ 0.2538, -0.1687],
+        [-0.0758, -0.1133],
+        [ 0.1306, -0.1245]], device='cuda:0', grad_fn=<AddmmBackward0>)
+y: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:0')
+output: tensor([[ 0.0031, -0.0502],
+        [ 0.1395, -0.2117],
+        [ 0.0511, -0.0511],
+        [ 0.3272, -0.0723],
+        [ 0.2857, -0.0577],
+        [ 0.1801, -0.1782],
+        [ 0.0396, -0.1926],
+        [ 0.1241, -0.1257],
+        [-0.0646, -0.0252],
+        [ 0.0164, -0.1005]], device='cuda:0', grad_fn=<AddmmBackward0>)
+y: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:0')
+  0%|                                                 | 0/1000 [00:16<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 40, in train
+    _, start_inference_loss = test(model, train_dataloader)
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 95, in test
+    loss += cel(output, y).item()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 603, in forward
+    return F.binary_cross_entropy(input, target, weight=self.weight, reduction=self.reduction)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/nn/functional.py", line 2906, in binary_cross_entropy
+    raise ValueError(
+ValueError: Using a target size (torch.Size([10])) that is different to the input size (torch.Size([10, 2])) is deprecated. Please ensure they have the same size.
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 345, in <module>
+    main(args)
+  File "train.py", line 200, in main
+    pool.map(
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+ValueError: Using a target size (torch.Size([10])) that is different to the input size (torch.Size([10, 2])) is deprecated. Please ensure they have the same size.

@@ -1,0 +1,7 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Init State dim 20
+Init Action dim 10
+ROUND:  0
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+

@@ -80,7 +80,7 @@ def select_drop_client(list_cl_per_round, drop_percent):
 
 
 def count_params(model):
-    return sum(p.numel() for p in model.parameters())
+    return sum(p.numel() for p in model.state_dict().values())
 
 
 def flatten_tensors(tensors):
@@ -96,15 +96,30 @@ def flatten_tensors(tensors):
     Returns:
         A 1D buffer containing input tensors.
     """
-    if len(tensors) == 1:
+    # print("flatting tensor: ", tensors)
+    # print(tensors.shape[0])
+    if len(tensors) and len(tensors) == 1:
         return tensors[0].view(-1).clone()
     flat = torch.cat([t.view(-1) for t in tensors], dim=0)
     return flat
 
 
 def flatten_model(model):
-    ten = torch.cat([flatten_tensors(i) for i in model.parameters()])
+    # for tensor in model.state_dict().values():
+    # # for tensor in model.parameters():
+    #     print("tensor", type(tensor))
+
+    ten = torch.cat([torch.flatten(p) for p in model.state_dict().values()])
     return ten
+    # l = [torch.flatten(p) for p in parameters]
+    # indices = []
+    # s = 0
+    # for p in l:
+    #     size = p.shape[0]
+    #     indices.append((s, s+size))
+    #     s += size
+    # flat = torch.cat(l).view(-1, 1)
+    # return flat, indices
 
 
 def unflatten_tensors(flat, tensors):
@@ -133,14 +148,25 @@ def unflatten_model(flat, model):
     count = 0
     l = []
     output = []
-    for tensor in model.parameters():
+    # print("model:", model)
+    # print("len of flat tensor: ", len(flat))
+    # # print(f"len(model.parameters()): {len(model.parameters())}")
+    # print(f"model.parameters: {len(list(model.parameters()))}")
+    # print(f"model.parameters: {len(list(model.parameters().keys()))}")
+    for tensor in model.state_dict().values():
         n = tensor.numel()
         output.append(flat[count: count + n].view_as(tensor))
         count += n
     output = tuple(output)
+    # print(f"count = {count}")
     temp = OrderedDict()
+
+    # for param_tensor in model.state_dict():
+    #     print(param_tensor, "\t", model.state_dict()[param_tensor].size())
+    #     # print(param_tensor.numel())
     for i, j in enumerate(model.state_dict().keys()):
         temp[j] = output[i]
+
     return temp
 
 
@@ -213,6 +239,8 @@ def aggregate(local_weight, n_models, negative_models, valid_losses):
 
 def aggregate_benchmark(local_weight, n_models):
     ratio = torch.ones(1,n_models)/n_models
+    ret = torch.squeeze(ratio @ local_weight)
+    # print(f"model.parameters(): {ret.parameters()}")
     return torch.squeeze(ratio @ local_weight)
 
 

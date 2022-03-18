@@ -1,0 +1,215 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+n_params: 11187158
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+len of flat tensor:  11187158
+model.parameters: 62
+count = 11187158
+output: 122
+model.state_dict().keys(): odict_keys(['conv1.weight', 'bn1.weight', 'bn1.bias', 'bn1.running_mean', 'bn1.running_var', 'bn1.num_batches_tracked', 'layer1.0.conv1.weight', 'layer1.0.bn1.weight', 'layer1.0.bn1.bias', 'layer1.0.bn1.running_mean', 'layer1.0.bn1.running_var', 'layer1.0.bn1.num_batches_tracked', 'layer1.0.conv2.weight', 'layer1.0.bn2.weight', 'layer1.0.bn2.bias', 'layer1.0.bn2.running_mean', 'layer1.0.bn2.running_var', 'layer1.0.bn2.num_batches_tracked', 'layer1.1.conv1.weight', 'layer1.1.bn1.weight', 'layer1.1.bn1.bias', 'layer1.1.bn1.running_mean', 'layer1.1.bn1.running_var', 'layer1.1.bn1.num_batches_tracked', 'layer1.1.conv2.weight', 'layer1.1.bn2.weight', 'layer1.1.bn2.bias', 'layer1.1.bn2.running_mean', 'layer1.1.bn2.running_var', 'layer1.1.bn2.num_batches_tracked', 'layer2.0.conv1.weight', 'layer2.0.bn1.weight', 'layer2.0.bn1.bias', 'layer2.0.bn1.running_mean', 'layer2.0.bn1.running_var', 'layer2.0.bn1.num_batches_tracked', 'layer2.0.conv2.weight', 'layer2.0.bn2.weight', 'layer2.0.bn2.bias', 'layer2.0.bn2.running_mean', 'layer2.0.bn2.running_var', 'layer2.0.bn2.num_batches_tracked', 'layer2.0.downsample.0.weight', 'layer2.0.downsample.1.weight', 'layer2.0.downsample.1.bias', 'layer2.0.downsample.1.running_mean', 'layer2.0.downsample.1.running_var', 'layer2.0.downsample.1.num_batches_tracked', 'layer2.1.conv1.weight', 'layer2.1.bn1.weight', 'layer2.1.bn1.bias', 'layer2.1.bn1.running_mean', 'layer2.1.bn1.running_var', 'layer2.1.bn1.num_batches_tracked', 'layer2.1.conv2.weight', 'layer2.1.bn2.weight', 'layer2.1.bn2.bias', 'layer2.1.bn2.running_mean', 'layer2.1.bn2.running_var', 'layer2.1.bn2.num_batches_tracked', 'layer3.0.conv1.weight', 'layer3.0.bn1.weight', 'layer3.0.bn1.bias', 'layer3.0.bn1.running_mean', 'layer3.0.bn1.running_var', 'layer3.0.bn1.num_batches_tracked', 'layer3.0.conv2.weight', 'layer3.0.bn2.weight', 'layer3.0.bn2.bias', 'layer3.0.bn2.running_mean', 'layer3.0.bn2.running_var', 'layer3.0.bn2.num_batches_tracked', 'layer3.0.downsample.0.weight', 'layer3.0.downsample.1.weight', 'layer3.0.downsample.1.bias', 'layer3.0.downsample.1.running_mean', 'layer3.0.downsample.1.running_var', 'layer3.0.downsample.1.num_batches_tracked', 'layer3.1.conv1.weight', 'layer3.1.bn1.weight', 'layer3.1.bn1.bias', 'layer3.1.bn1.running_mean', 'layer3.1.bn1.running_var', 'layer3.1.bn1.num_batches_tracked', 'layer3.1.conv2.weight', 'layer3.1.bn2.weight', 'layer3.1.bn2.bias', 'layer3.1.bn2.running_mean', 'layer3.1.bn2.running_var', 'layer3.1.bn2.num_batches_tracked', 'layer4.0.conv1.weight', 'layer4.0.bn1.weight', 'layer4.0.bn1.bias', 'layer4.0.bn1.running_mean', 'layer4.0.bn1.running_var', 'layer4.0.bn1.num_batches_tracked', 'layer4.0.conv2.weight', 'layer4.0.bn2.weight', 'layer4.0.bn2.bias', 'layer4.0.bn2.running_mean', 'layer4.0.bn2.running_var', 'layer4.0.bn2.num_batches_tracked', 'layer4.0.downsample.0.weight', 'layer4.0.downsample.1.weight', 'layer4.0.downsample.1.bias', 'layer4.0.downsample.1.running_mean', 'layer4.0.downsample.1.running_var', 'layer4.0.downsample.1.num_batches_tracked', 'layer4.1.conv1.weight', 'layer4.1.bn1.weight', 'layer4.1.bn1.bias', 'layer4.1.bn1.running_mean', 'layer4.1.bn1.running_var', 'layer4.1.bn1.num_batches_tracked', 'layer4.1.conv2.weight', 'layer4.1.bn2.weight', 'layer4.1.bn2.bias', 'layer4.1.bn2.running_mean', 'layer4.1.bn2.running_var', 'layer4.1.bn2.num_batches_tracked', 'fc.weight', 'fc.bias'])
+len of model.state_dict().keys(): 122
+conv1.weight
+bn1.weight
+bn1.bias
+layer1.0.conv1.weight
+layer1.0.bn1.weight
+layer1.0.bn1.bias
+layer1.0.conv2.weight
+layer1.0.bn2.weight
+layer1.0.bn2.bias
+layer1.1.conv1.weight
+layer1.1.bn1.weight
+layer1.1.bn1.bias
+layer1.1.conv2.weight
+layer1.1.bn2.weight
+layer1.1.bn2.bias
+layer2.0.conv1.weight
+layer2.0.bn1.weight
+layer2.0.bn1.bias
+layer2.0.conv2.weight
+layer2.0.bn2.weight
+layer2.0.bn2.bias
+layer2.0.downsample.0.weight
+layer2.0.downsample.1.weight
+layer2.0.downsample.1.bias
+layer2.1.conv1.weight
+layer2.1.bn1.weight
+layer2.1.bn1.bias
+layer2.1.conv2.weight
+layer2.1.bn2.weight
+layer2.1.bn2.bias
+layer3.0.conv1.weight
+layer3.0.bn1.weight
+layer3.0.bn1.bias
+layer3.0.conv2.weight
+layer3.0.bn2.weight
+layer3.0.bn2.bias
+layer3.0.downsample.0.weight
+layer3.0.downsample.1.weight
+layer3.0.downsample.1.bias
+layer3.1.conv1.weight
+layer3.1.bn1.weight
+layer3.1.bn1.bias
+layer3.1.conv2.weight
+layer3.1.bn2.weight
+layer3.1.bn2.bias
+layer4.0.conv1.weight
+layer4.0.bn1.weight
+layer4.0.bn1.bias
+layer4.0.conv2.weight
+layer4.0.bn2.weight
+layer4.0.bn2.bias
+layer4.0.downsample.0.weight
+layer4.0.downsample.1.weight
+layer4.0.downsample.1.bias
+layer4.1.conv1.weight
+layer4.1.bn1.weight
+layer4.1.bn1.bias
+layer4.1.conv2.weight
+layer4.1.bn2.weight
+layer4.1.bn2.bias
+fc.weight
+fc.bias
+Model's state_dict:
+conv1.weight 	 torch.Size([64, 3, 7, 7])
+bn1.weight 	 torch.Size([64])
+bn1.bias 	 torch.Size([64])
+bn1.running_mean 	 torch.Size([64])
+bn1.running_var 	 torch.Size([64])
+bn1.num_batches_tracked 	 torch.Size([])
+layer1.0.conv1.weight 	 torch.Size([64, 64, 3, 3])
+layer1.0.bn1.weight 	 torch.Size([64])
+layer1.0.bn1.bias 	 torch.Size([64])
+layer1.0.bn1.running_mean 	 torch.Size([64])
+layer1.0.bn1.running_var 	 torch.Size([64])
+layer1.0.bn1.num_batches_tracked 	 torch.Size([])
+layer1.0.conv2.weight 	 torch.Size([64, 64, 3, 3])
+layer1.0.bn2.weight 	 torch.Size([64])
+layer1.0.bn2.bias 	 torch.Size([64])
+layer1.0.bn2.running_mean 	 torch.Size([64])
+layer1.0.bn2.running_var 	 torch.Size([64])
+layer1.0.bn2.num_batches_tracked 	 torch.Size([])
+layer1.1.conv1.weight 	 torch.Size([64, 64, 3, 3])
+layer1.1.bn1.weight 	 torch.Size([64])
+layer1.1.bn1.bias 	 torch.Size([64])
+layer1.1.bn1.running_mean 	 torch.Size([64])
+layer1.1.bn1.running_var 	 torch.Size([64])
+layer1.1.bn1.num_batches_tracked 	 torch.Size([])
+layer1.1.conv2.weight 	 torch.Size([64, 64, 3, 3])
+layer1.1.bn2.weight 	 torch.Size([64])
+layer1.1.bn2.bias 	 torch.Size([64])
+layer1.1.bn2.running_mean 	 torch.Size([64])
+layer1.1.bn2.running_var 	 torch.Size([64])
+layer1.1.bn2.num_batches_tracked 	 torch.Size([])
+layer2.0.conv1.weight 	 torch.Size([128, 64, 3, 3])
+layer2.0.bn1.weight 	 torch.Size([128])
+layer2.0.bn1.bias 	 torch.Size([128])
+layer2.0.bn1.running_mean 	 torch.Size([128])
+layer2.0.bn1.running_var 	 torch.Size([128])
+layer2.0.bn1.num_batches_tracked 	 torch.Size([])
+layer2.0.conv2.weight 	 torch.Size([128, 128, 3, 3])
+layer2.0.bn2.weight 	 torch.Size([128])
+layer2.0.bn2.bias 	 torch.Size([128])
+layer2.0.bn2.running_mean 	 torch.Size([128])
+layer2.0.bn2.running_var 	 torch.Size([128])
+layer2.0.bn2.num_batches_tracked 	 torch.Size([])
+layer2.0.downsample.0.weight 	 torch.Size([128, 64, 1, 1])
+layer2.0.downsample.1.weight 	 torch.Size([128])
+layer2.0.downsample.1.bias 	 torch.Size([128])
+layer2.0.downsample.1.running_mean 	 torch.Size([128])
+layer2.0.downsample.1.running_var 	 torch.Size([128])
+layer2.0.downsample.1.num_batches_tracked 	 torch.Size([])
+layer2.1.conv1.weight 	 torch.Size([128, 128, 3, 3])
+layer2.1.bn1.weight 	 torch.Size([128])
+layer2.1.bn1.bias 	 torch.Size([128])
+layer2.1.bn1.running_mean 	 torch.Size([128])
+layer2.1.bn1.running_var 	 torch.Size([128])
+layer2.1.bn1.num_batches_tracked 	 torch.Size([])
+layer2.1.conv2.weight 	 torch.Size([128, 128, 3, 3])
+layer2.1.bn2.weight 	 torch.Size([128])
+layer2.1.bn2.bias 	 torch.Size([128])
+layer2.1.bn2.running_mean 	 torch.Size([128])
+layer2.1.bn2.running_var 	 torch.Size([128])
+layer2.1.bn2.num_batches_tracked 	 torch.Size([])
+layer3.0.conv1.weight 	 torch.Size([256, 128, 3, 3])
+layer3.0.bn1.weight 	 torch.Size([256])
+layer3.0.bn1.bias 	 torch.Size([256])
+layer3.0.bn1.running_mean 	 torch.Size([256])
+layer3.0.bn1.running_var 	 torch.Size([256])
+layer3.0.bn1.num_batches_tracked 	 torch.Size([])
+layer3.0.conv2.weight 	 torch.Size([256, 256, 3, 3])
+layer3.0.bn2.weight 	 torch.Size([256])
+layer3.0.bn2.bias 	 torch.Size([256])
+layer3.0.bn2.running_mean 	 torch.Size([256])
+layer3.0.bn2.running_var 	 torch.Size([256])
+layer3.0.bn2.num_batches_tracked 	 torch.Size([])
+layer3.0.downsample.0.weight 	 torch.Size([256, 128, 1, 1])
+layer3.0.downsample.1.weight 	 torch.Size([256])
+layer3.0.downsample.1.bias 	 torch.Size([256])
+layer3.0.downsample.1.running_mean 	 torch.Size([256])
+layer3.0.downsample.1.running_var 	 torch.Size([256])
+layer3.0.downsample.1.num_batches_tracked 	 torch.Size([])
+layer3.1.conv1.weight 	 torch.Size([256, 256, 3, 3])
+layer3.1.bn1.weight 	 torch.Size([256])
+layer3.1.bn1.bias 	 torch.Size([256])
+layer3.1.bn1.running_mean 	 torch.Size([256])
+layer3.1.bn1.running_var 	 torch.Size([256])
+layer3.1.bn1.num_batches_tracked 	 torch.Size([])
+layer3.1.conv2.weight 	 torch.Size([256, 256, 3, 3])
+layer3.1.bn2.weight 	 torch.Size([256])
+layer3.1.bn2.bias 	 torch.Size([256])
+layer3.1.bn2.running_mean 	 torch.Size([256])
+layer3.1.bn2.running_var 	 torch.Size([256])
+layer3.1.bn2.num_batches_tracked 	 torch.Size([])
+layer4.0.conv1.weight 	 torch.Size([512, 256, 3, 3])
+layer4.0.bn1.weight 	 torch.Size([512])
+layer4.0.bn1.bias 	 torch.Size([512])
+layer4.0.bn1.running_mean 	 torch.Size([512])
+layer4.0.bn1.running_var 	 torch.Size([512])
+layer4.0.bn1.num_batches_tracked 	 torch.Size([])
+layer4.0.conv2.weight 	 torch.Size([512, 512, 3, 3])
+layer4.0.bn2.weight 	 torch.Size([512])
+layer4.0.bn2.bias 	 torch.Size([512])
+layer4.0.bn2.running_mean 	 torch.Size([512])
+layer4.0.bn2.running_var 	 torch.Size([512])
+layer4.0.bn2.num_batches_tracked 	 torch.Size([])
+layer4.0.downsample.0.weight 	 torch.Size([512, 256, 1, 1])
+layer4.0.downsample.1.weight 	 torch.Size([512])
+layer4.0.downsample.1.bias 	 torch.Size([512])
+layer4.0.downsample.1.running_mean 	 torch.Size([512])
+layer4.0.downsample.1.running_var 	 torch.Size([512])
+layer4.0.downsample.1.num_batches_tracked 	 torch.Size([])
+layer4.1.conv1.weight 	 torch.Size([512, 512, 3, 3])
+layer4.1.bn1.weight 	 torch.Size([512])
+layer4.1.bn1.bias 	 torch.Size([512])
+layer4.1.bn1.running_mean 	 torch.Size([512])
+layer4.1.bn1.running_var 	 torch.Size([512])
+layer4.1.bn1.num_batches_tracked 	 torch.Size([])
+layer4.1.conv2.weight 	 torch.Size([512, 512, 3, 3])
+layer4.1.bn2.weight 	 torch.Size([512])
+layer4.1.bn2.bias 	 torch.Size([512])
+layer4.1.bn2.running_mean 	 torch.Size([512])
+layer4.1.bn2.running_var 	 torch.Size([512])
+layer4.1.bn2.num_batches_tracked 	 torch.Size([])
+fc.weight 	 torch.Size([2, 512])
+fc.bias 	 torch.Size([2])
+  0%|                                                 | 0/1000 [00:49<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 345, in <module>
+    main(args)
+  File "train.py", line 263, in main
+    acc, test_loss = test(client_model, DataLoader(test_dataset, 32, False))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 87, in test
+    for X, y in test_dataloader:
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+TypeError: 'DataLoader' object is not subscriptable

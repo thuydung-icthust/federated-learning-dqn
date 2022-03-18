@@ -1,0 +1,17 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+n_params: 11177538
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+len of flat tensor:  11177538
+  0%|                                                                    | 0/1000 [00:51<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 345, in <module>
+    main(args)
+  File "train.py", line 261, in main
+    client_model.load_state_dict(unflatten_model(flat_tensor, client_model))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/utils.py", line 138, in unflatten_model
+    print(f"len(model.parameters()): {len(model.parameters())}")
+TypeError: object of type 'generator' has no len()

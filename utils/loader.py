@@ -264,10 +264,11 @@ class CheXpertDataSet(Dataset):
         image_name = self.image_names[index]
         image = Image.open(image_name).convert('RGB')
         label = self.labels[index]
-        print(f"label[0] : {label[0]}\nlabel shape: {len(label)}")
+        # print(f"label[0] : {label[0]}\nlabel shape: {len(label)}")
+        # print(f"torch.FloatTensor(label[0]): {torch.FloatTensor(np.asarray(float(label[0])))}")
         if self.transform is not None:
             image = self.transform(image)
-        return image, torch.FloatTensor(label[0])
+        return image, torch.FloatTensor(np.asarray(float(label[0])))
 
     def __len__(self):
         return len(self.image_names)
@@ -325,5 +326,5 @@ def load_cheXpert_dataset():
     monotonic_data_idx = find_indices(cnt_monotonic_labels, lambda e: e == 1)
     training_dataset = torch.utils.data.Subset(dataLoaderTrain, monotonic_data_idx)
     
-    return dataset, dataLoaderTrain, dataLoaderVal, dataLoaderTest
+    return dataset, dataLoaderTrain, dataLoaderVal, datasetTest
     

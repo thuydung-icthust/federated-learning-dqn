@@ -1,0 +1,18 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+n_params: 11177538
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+len of flat tensor:  11177538
+model.parameters: 62
+  0%|                                                 | 0/1000 [01:03<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 345, in <module>
+    main(args)
+  File "train.py", line 261, in main
+    client_model.load_state_dict(unflatten_model(flat_tensor, client_model))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/utils.py", line 154, in unflatten_model
+    output.append(flat[count: count + n].view_as(tensor))
+RuntimeError: shape '[512, 512, 3, 3]' is invalid for input of size 2352751

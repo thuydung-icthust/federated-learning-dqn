@@ -1,0 +1,27 @@
+2022-03-18 18:58:21,958 INFO    MainThread:24340 [wandb_setup.py:_flush():71] setting env: {}
+2022-03-18 18:58:21,959 INFO    MainThread:24340 [wandb_init.py:_log_setup():371] Logging user logs to /mnt/disk1/dungnt-vaipe/federated-learning-dqn/wandb/offline-run-20220318_185821-1rssppk4/logs/debug.log
+2022-03-18 18:58:21,959 INFO    MainThread:24340 [wandb_init.py:_log_setup():372] Logging internal logs to /mnt/disk1/dungnt-vaipe/federated-learning-dqn/wandb/offline-run-20220318_185821-1rssppk4/logs/debug-internal.log
+2022-03-18 18:58:21,959 INFO    MainThread:24340 [wandb_init.py:init():404] calling init triggers
+2022-03-18 18:58:21,959 INFO    MainThread:24340 [wandb_init.py:init():409] wandb.init called with sweep_config: {}
+config: {'num_rounds': 1000, 'num_clients': 3, 'clients_per_round': 3, 'batch_size': 10, 'num_epochs': 5, 'path_data_idx': 'dataset_idx/chexpert/CheXpert-noniid-mnist_equal_sample_1.json', 'learning_rate': 0.01, 'algorithm': '', 'mu': 0.01, 'seed': 10, 'drop_percent': 0.0, 'num_core': 6, 'log_dir': './', 'train_mode': 'benchmark', 'dataset_name': 'chexpert', 'beta': 0.45, 'hidden_dim': 256, 'init_w': 0.001, 'value_lr': 0.001, 'policy_lr': 0.0001, 'max_steps': 800, 'max_frames': 12000, 'batch_size_ddpg': 4, 'gamma': 0.99, 'soft_tau': 0.02, 'path_data_valid_idx': 'dataset_idx/mnist/equal/MNIST-noniid-fedavg_equal_1.json'}
+2022-03-18 18:58:21,959 INFO    MainThread:24340 [wandb_init.py:init():460] starting backend
+2022-03-18 18:58:21,959 INFO    MainThread:24340 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-03-18 18:58:21,972 INFO    MainThread:24340 [backend.py:ensure_launched():216] starting backend process...
+2022-03-18 18:58:21,981 INFO    MainThread:24340 [backend.py:ensure_launched():221] started backend process with pid: 24479
+2022-03-18 18:58:21,983 INFO    MainThread:24340 [wandb_init.py:init():469] backend started and connected
+2022-03-18 18:58:21,990 INFO    MainThread:24340 [wandb_init.py:init():533] updated telemetry
+2022-03-18 18:58:22,022 INFO    MainThread:24340 [wandb_init.py:init():606] starting run threads in backend
+2022-03-18 18:58:24,913 INFO    MainThread:24340 [wandb_run.py:_console_start():1810] atexit reg
+2022-03-18 18:58:24,914 INFO    MainThread:24340 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-03-18 18:58:24,915 INFO    MainThread:24340 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-03-18 18:58:24,918 INFO    MainThread:24340 [wandb_run.py:_redirect():1745] Redirects installed.
+2022-03-18 18:58:24,919 INFO    MainThread:24340 [wandb_init.py:init():633] run started, returning control to user process
+2022-03-18 18:58:42,806 INFO    MainThread:24340 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 1
+2022-03-18 18:58:42,809 INFO    MainThread:24340 [wandb_run.py:_restore():1752] restore
+2022-03-18 18:58:45,541 INFO    MainThread:24340 [wandb_run.py:_wait_for_finish():1912] got exit ret: 
+2022-03-18 18:58:45,644 INFO    MainThread:24340 [wandb_run.py:_wait_for_finish():1912] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+

@@ -1,0 +1,159 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+n_params: 11187158
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+ROUND:  0  TEST ACC:  0.878
+ROUND:  1
+[5, 5, 5]
+ROUND:  1  TEST ACC:  0.878
+ROUND:  2
+[5, 5, 5]
+ROUND:  2  TEST ACC:  0.878
+ROUND:  3
+[5, 5, 5]
+ROUND:  3  TEST ACC:  0.878
+ROUND:  4
+[5, 5, 5]
+ROUND:  4  TEST ACC:  0.878
+ROUND:  5
+[5, 5, 5]
+ROUND:  5  TEST ACC:  0.878
+ROUND:  6
+[5, 5, 5]
+ROUND:  6  TEST ACC:  0.878
+ROUND:  7
+[5, 5, 5]
+ROUND:  7  TEST ACC:  0.878
+ROUND:  8
+[5, 5, 5]
+ROUND:  8  TEST ACC:  0.878
+ROUND:  9
+[5, 5, 5]
+ROUND:  9  TEST ACC:  0.878
+ROUND:  10
+[5, 5, 5]
+ROUND:  10  TEST ACC:  0.878
+ROUND:  11
+[5, 5, 5]
+ROUND:  11  TEST ACC:  0.878
+ROUND:  12
+[5, 5, 5]
+  1%|▍                                    | 12/1000 [09:26<12:14:30, 44.61s/it]Process SpawnPoolWorker-6:
+Process SpawnPoolWorker-7:
+Process SpawnPoolWorker-3:
+  1%|▍                                    | 12/1000 [09:28<12:59:41, 47.35s/it]
+Process SpawnPoolWorker-4:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/queues.py", line 355, in get
+    with self._rlock:
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/queues.py", line 355, in get
+    with self._rlock:
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/queues.py", line 356, in get
+    res = self._reader.recv_bytes()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+KeyboardInterrupt
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "train.py", line 345, in <module>
+  File "train.py", line 200, in main
+    pool.map(
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 765, in get
+    self.wait(timeout)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 762, in wait
+    self._event.wait(timeout)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 40, in train
+    _, start_inference_loss = test(model, train_dataloader)
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 87, in test
+    for X, y in test_dataloader:
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/loader.py", line 216, in __getitem__
+    image, label = self.dataset[self.idxs[item]]
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/loader.py", line 265, in __getitem__
+    image = Image.open(image_name).convert('RGB')
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/PIL/Image.py", line 915, in convert
+    self.load()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/PIL/ImageFile.py", line 255, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt
+Process SpawnPoolWorker-5:
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/queues.py", line 358, in get
+    return _ForkingPickler.loads(res)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/enum.py", line 313, in __call__
+    def __call__(cls, value, names=None, *, module=None, qualname=None, type=None, start=1):
+KeyboardInterrupt
+Process SpawnPoolWorker-2:
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 114, in worker
+    task = get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/queues.py", line 358, in get
+    return _ForkingPickler.loads(res)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/enum.py", line 313, in __call__
+    def __call__(cls, value, names=None, *, module=None, qualname=None, type=None, start=1):
+KeyboardInterrupt

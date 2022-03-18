@@ -1,0 +1,15 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+  0%|                                                                    | 0/1000 [00:56<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 344, in <module>
+    main(args)
+  File "train.py", line 218, in main
+    flat_tensor = aggregate_benchmark(local_model_weight, len(train_clients))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/utils.py", line 228, in aggregate_benchmark
+    print(f"model.parameters(): {ret.parameters()}")
+AttributeError: 'Tensor' object has no attribute 'parameters'

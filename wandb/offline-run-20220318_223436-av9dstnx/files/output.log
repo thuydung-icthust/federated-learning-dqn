@@ -1,0 +1,38 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+n_params: 11187158
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+  0%|                                                 | 0/1000 [00:11<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 40, in train
+    _, start_inference_loss = test(model, train_dataloader)
+  File "/mnt/disk1/dungnt-vaipe/federated-learning-dqn/utils/trainer.py", line 95, in test
+    loss += cel(output, y).item()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 603, in forward
+    return F.binary_cross_entropy(input, target, weight=self.weight, reduction=self.reduction)
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/nn/functional.py", line 2906, in binary_cross_entropy
+    raise ValueError(
+ValueError: Using a target size (torch.Size([10])) that is different to the input size (torch.Size([10, 2])) is deprecated. Please ensure they have the same size.
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 345, in <module>
+    main(args)
+  File "train.py", line 200, in main
+    pool.map(
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+ValueError: Using a target size (torch.Size([10])) that is different to the input size (torch.Size([10, 2])) is deprecated. Please ensure they have the same size.

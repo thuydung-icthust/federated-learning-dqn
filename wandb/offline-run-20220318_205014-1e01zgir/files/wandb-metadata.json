@@ -1,0 +1,36 @@
+{
+    "os": "Linux-5.4.0-104-generic-x86_64-with-glibc2.10",
+    "python": "3.8.12",
+    "heartbeatAt": "2022-03-18T13:50:16.393394",
+    "startedAt": "2022-03-18T13:50:14.795937",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "cpu_count": 40,
+    "cuda": null,
+    "args": [
+        "--train_mode=benchmark",
+        "--dataset_name=chexpert",
+        "--num_clients=3",
+        "--clients_per_round=3",
+        "--num_rounds=1000",
+        "--learning_rate=0.01",
+        "--batch_size=10",
+        "--num_epochs=5",
+        "--path_data_idx=dataset_idx/chexpert/CheXpert-noniid-mnist_equal_sample_1.json",
+        "--run_name=FedAVG-Equal-Non-IID-01-2.1.1",
+        "--group_name=CHEXPERT-FedAvg-Equal"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/thuydung-icthust/federated-learning-dqn.git",
+        "commit": "6e8b50ddc07e3c361f65a57535c83cb7966a50a8"
+    },
+    "email": "Hung.nn184118@sis.hust.edu.vn",
+    "root": "/mnt/disk1/dungnt-vaipe/federated-learning-dqn",
+    "host": "aiotlabws",
+    "username": "aiotlabws",
+    "executable": "/home/aiotlabws/Workspace/Env/anaconda3/envs/longnd/bin/python3"
+}
