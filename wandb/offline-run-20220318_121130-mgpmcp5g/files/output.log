@@ -1,0 +1,47 @@
+>>> START RUNNING: FedAVG-Equal-Non-IID-01-2.1.1 - Train mode: benchmark - Dataset: chexpert
+START LOADING CHEXPERT DATASET...
+Init State dim 6
+Init Action dim 3
+ROUND:  0
+[5, 5, 5]
+output: tensor([[ 0.4828,  0.6363,  0.3425,  ...,  0.9004,  0.1645, -0.7388],
+        [ 0.5836,  0.5596,  0.2751,  ...,  0.5144,  0.1212, -0.6270],
+        [ 0.4680,  0.4524,  0.0632,  ...,  0.7322, -0.0095, -0.5166],
+        ...,
+        [ 0.7556,  1.1219,  0.3277,  ...,  0.8039,  0.2376, -0.3167],
+        [ 1.0302,  1.4506,  0.5095,  ...,  0.7793,  0.6019, -0.4274],
+        [ 0.8191,  0.8157,  0.2810,  ...,  0.5677,  0.2924, -0.6867]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)
+y: tensor([], device='cuda:0', size=(10, 0))
+Using cache found in /home/aiotlab/.cache/torch/hub/pytorch_vision_v0.10.0
+  0%|                                                                                             | 0/1000 [00:10<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/trainer.py", line 40, in train
+    _, start_inference_loss = test(model, train_dataloader)
+  File "/mnt/disk1/dungnt/federated-learning-dqn/utils/trainer.py", line 94, in test
+    loss += cel(output, y).item()
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 1150, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/site-packages/torch/nn/functional.py", line 2846, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 344, in <module>
+    main(args)
+  File "train.py", line 199, in main
+    pool.map(
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aiotlab/anaconda3/envs/longvaipe/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported

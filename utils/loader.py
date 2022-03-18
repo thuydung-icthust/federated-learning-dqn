@@ -264,6 +264,7 @@ class CheXpertDataSet(Dataset):
         image_name = self.image_names[index]
         image = Image.open(image_name).convert('RGB')
         label = self.labels[index]
+        print(f"label[0] : {label[0]}\nlabel shape: {len(label)}")
         if self.transform is not None:
             image = self.transform(image)
         return image, torch.FloatTensor(label[0])

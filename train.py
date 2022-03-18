@@ -42,7 +42,7 @@ from torch.utils.data import DataLoader
 from utils.option import option
 from models.models import MNIST_CNN, CNNCifar
 from models.vgg import vgg11
-from models.resnet18 import ResNet18
+from models.resnet18 import resnet18
 from ddpg_agent.ddpg import *
 import wandb
 import warnings
@@ -103,7 +103,8 @@ def init_model(dataset_name):
     elif dataset_name == "fashionmnist":
         model = MNIST_CNN()
     elif dataset_name == "chexpert":
-        model = ResNet18()
+        model = resnet18(num_classes=2)
+        # model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
     else:
         warnings.warn("Model not supported")
     return model

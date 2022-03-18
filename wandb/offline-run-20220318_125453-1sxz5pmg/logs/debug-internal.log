@@ -1,0 +1,13 @@
+2022-03-18 12:54:54,433 INFO    MainThread:3933 [internal.py:wandb_internal():92] W&B internal server running at pid: 3933, started at: 2022-03-18 12:54:54.433584
+2022-03-18 12:54:54,437 DEBUG   HandlerThread:3933 [handler.py:handle_request():141] handle_request: run_start
+2022-03-18 12:54:54,438 INFO    WriterThread:3933 [datastore.py:open_for_write():77] open: /mnt/disk1/dungnt/federated-learning-dqn/wandb/offline-run-20220318_125453-1sxz5pmg/run-1sxz5pmg.wandb
+2022-03-18 12:54:54,446 DEBUG   HandlerThread:3933 [meta.py:__init__():37] meta init
+2022-03-18 12:54:54,446 DEBUG   HandlerThread:3933 [meta.py:__init__():51] meta init done
+2022-03-18 12:54:54,446 DEBUG   HandlerThread:3933 [meta.py:probe():211] probe
+2022-03-18 12:54:54,453 DEBUG   HandlerThread:3933 [meta.py:_setup_git():201] setup git
+2022-03-18 12:54:54,472 DEBUG   HandlerThread:3933 [meta.py:_setup_git():208] setup git done
+2022-03-18 12:54:54,472 DEBUG   HandlerThread:3933 [meta.py:_save_pip():55] save pip
+2022-03-18 12:54:54,473 DEBUG   HandlerThread:3933 [meta.py:_save_pip():69] save pip done
+2022-03-18 12:54:54,473 DEBUG   HandlerThread:3933 [meta.py:_save_conda():76] save conda
+2022-03-18 12:55:02,288 DEBUG   HandlerThread:3933 [meta.py:_save_conda():86] save conda done
+2022-03-18 12:55:02,288 DEBUG   HandlerThread:3933 [meta.py:probe():249] probe done

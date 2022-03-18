@@ -88,6 +88,10 @@ def test(model, test_dataloader):
         X = X.to(device)
         y = y.to(device)
         output = model(X)
+        print(f"output: {output}")
+        print(f"x: {X}")
+        print(f"y: {y}")
+        
         loss += cel(output, y).item()
         output = output.argmax(-1)
         y_prd.append(output.cpu())

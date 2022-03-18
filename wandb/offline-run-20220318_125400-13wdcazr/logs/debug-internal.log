@@ -1,0 +1,20 @@
+2022-03-18 12:54:01,364 INFO    MainThread:46654 [internal.py:wandb_internal():92] W&B internal server running at pid: 46654, started at: 2022-03-18 12:54:01.363994
+2022-03-18 12:54:01,367 DEBUG   HandlerThread:46654 [handler.py:handle_request():141] handle_request: run_start
+2022-03-18 12:54:01,367 INFO    WriterThread:46654 [datastore.py:open_for_write():77] open: /mnt/disk1/dungnt/federated-learning-dqn/wandb/offline-run-20220318_125400-13wdcazr/run-13wdcazr.wandb
+2022-03-18 12:54:01,375 DEBUG   HandlerThread:46654 [meta.py:__init__():37] meta init
+2022-03-18 12:54:01,375 DEBUG   HandlerThread:46654 [meta.py:__init__():51] meta init done
+2022-03-18 12:54:01,375 DEBUG   HandlerThread:46654 [meta.py:probe():211] probe
+2022-03-18 12:54:01,382 DEBUG   HandlerThread:46654 [meta.py:_setup_git():201] setup git
+2022-03-18 12:54:01,402 DEBUG   HandlerThread:46654 [meta.py:_setup_git():208] setup git done
+2022-03-18 12:54:01,402 DEBUG   HandlerThread:46654 [meta.py:_save_pip():55] save pip
+2022-03-18 12:54:01,403 DEBUG   HandlerThread:46654 [meta.py:_save_pip():69] save pip done
+2022-03-18 12:54:01,403 DEBUG   HandlerThread:46654 [meta.py:_save_conda():76] save conda
+2022-03-18 12:54:03,855 WARNING MainThread:46654 [internal.py:wandb_internal():155] Internal process interrupt: 1
+2022-03-18 12:54:03,928 DEBUG   HandlerThread:46654 [meta.py:_save_conda():86] save conda done
+2022-03-18 12:54:03,929 DEBUG   HandlerThread:46654 [meta.py:probe():249] probe done
+2022-03-18 12:54:06,316 WARNING MainThread:46654 [internal.py:wandb_internal():155] Internal process interrupt: 2
+2022-03-18 12:54:06,316 ERROR   MainThread:46654 [internal.py:wandb_internal():158] Internal process interrupted.
+2022-03-18 12:54:06,372 INFO    SenderThread:46654 [sender.py:finish():1078] shutting down sender
+2022-03-18 12:54:07,068 INFO    WriterThread:46654 [datastore.py:close():281] close: /mnt/disk1/dungnt/federated-learning-dqn/wandb/offline-run-20220318_125400-13wdcazr/run-13wdcazr.wandb
+2022-03-18 12:54:07,071 INFO    HandlerThread:46654 [handler.py:finish():778] shutting down handler
+2022-03-18 12:54:07,072 INFO    MainThread:46654 [internal.py:handle_exit():82] Internal process exited
