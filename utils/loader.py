@@ -3,6 +3,7 @@ import csv
 from torch.utils.data.dataset import random_split
 from torch.utils.data import DataLoader
 import torch
+from PIL import Image
 
 def iid_partition(dataset, clients):
     """
