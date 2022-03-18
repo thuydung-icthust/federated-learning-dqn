@@ -85,7 +85,7 @@ def load_dataset(dataset_name, path_data_idx, path_data_valid_idx = None):
         
         list_idx_sample = load_dataset_idx(path_data_idx)
     elif dataset_name == "chexpert":
-        dataset, train_dataset, valid_set, test_dataset = load_cheXpert_dataset()
+        train_dataset, train_dataset_, valid_set, test_dataset = load_cheXpert_dataset()
         list_idx_sample = load_dataset_idx(path_data_idx)
     else:
         warnings.warn("Dataset not supported")
