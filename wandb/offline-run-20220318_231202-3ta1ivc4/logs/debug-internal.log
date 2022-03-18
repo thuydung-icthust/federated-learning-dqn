@@ -1,0 +1,20 @@
+2022-03-18 23:12:03,665 INFO    MainThread:30691 [internal.py:wandb_internal():87] W&B internal server running at pid: 30691, started at: 2022-03-18 23:12:03.664987
+2022-03-18 23:12:03,669 DEBUG   HandlerThread:30691 [handler.py:handle_request():130] handle_request: run_start
+2022-03-18 23:12:03,671 INFO    WriterThread:30691 [datastore.py:open_for_write():77] open: /mnt/disk1/dungnt-vaipe/federated-learning-dqn/wandb/offline-run-20220318_231202-3ta1ivc4/run-3ta1ivc4.wandb
+2022-03-18 23:12:03,677 DEBUG   HandlerThread:30691 [meta.py:__init__():40] meta init
+2022-03-18 23:12:03,677 DEBUG   HandlerThread:30691 [meta.py:__init__():54] meta init done
+2022-03-18 23:12:03,678 DEBUG   HandlerThread:30691 [meta.py:probe():214] probe
+2022-03-18 23:12:03,685 DEBUG   HandlerThread:30691 [meta.py:_setup_git():204] setup git
+2022-03-18 23:12:03,716 DEBUG   HandlerThread:30691 [meta.py:_setup_git():211] setup git done
+2022-03-18 23:12:03,717 DEBUG   HandlerThread:30691 [meta.py:_save_pip():58] save pip
+2022-03-18 23:12:03,717 DEBUG   HandlerThread:30691 [meta.py:_save_pip():72] save pip done
+2022-03-18 23:12:03,717 DEBUG   HandlerThread:30691 [meta.py:_save_conda():79] save conda
+2022-03-18 23:12:06,146 DEBUG   HandlerThread:30691 [meta.py:_save_conda():89] save conda done
+2022-03-18 23:12:06,147 DEBUG   HandlerThread:30691 [meta.py:probe():252] probe done
+2022-03-18 23:52:12,717 WARNING MainThread:30691 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-03-18 23:52:14,017 WARNING MainThread:30691 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2022-03-18 23:52:14,017 ERROR   MainThread:30691 [internal.py:wandb_internal():149] Internal process interrupted.
+2022-03-18 23:52:14,420 INFO    SenderThread:30691 [sender.py:finish():1070] shutting down sender
+2022-03-18 23:52:14,703 INFO    WriterThread:30691 [datastore.py:close():281] close: /mnt/disk1/dungnt-vaipe/federated-learning-dqn/wandb/offline-run-20220318_231202-3ta1ivc4/run-3ta1ivc4.wandb
+2022-03-18 23:52:14,715 INFO    HandlerThread:30691 [handler.py:finish():731] shutting down handler
+2022-03-18 23:52:14,717 INFO    MainThread:30691 [internal.py:handle_exit():77] Internal process exited
